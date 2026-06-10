@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Gentle Bookshop — gentle books for little ones and golden years</title>
+<meta name="description" content="Bold & easy colouring books, beautifully illustrated children's stories, and large-print puzzle books for seniors. Every book made with care, big friendly pages, and zero stress." />
+<meta property="og:title" content="The Gentle Bookshop" />
+<meta property="og:description" content="Gentle books for little ones and golden years — colouring books, children's stories and large-print puzzles for seniors." />
+<meta property="og:image" content="assets/logo.png" />
+<style>
+  :root {
+    --teal: #105c64; --teal-d: #0b454c; --teal-l: #1a7a84;
+    --cream: #fcf7ec; --paper: #fffdf8; --ink: #21302e;
+    --orange: #f08c34; --yellow: #fac846; --muted: #5f7472;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Georgia, 'Times New Roman', serif; background: var(--paper); color: var(--ink); }
+  .sans { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+
+  header { background: radial-gradient(ellipse 900px 600px at 50% 0%, var(--teal-l) 0%, var(--teal) 55%, var(--teal-d) 100%);
+           color: var(--cream); text-align: center; padding: 64px 20px 84px; }
+  .logo { width: 168px; height: 168px; border-radius: 50%; border: 6px solid var(--cream);
+          object-fit: cover; box-shadow: 0 16px 44px rgba(0,0,0,.35); }
+  h1 { font-size: clamp(38px, 6vw, 64px); margin: 26px 0 10px; letter-spacing: -0.5px; }
+  .tagline { font-size: clamp(17px, 2.6vw, 22px); color: var(--yellow); font-style: italic; }
+  .hero-sub { max-width: 640px; margin: 22px auto 0; font-size: 17px; line-height: 1.65; color: #dcebe9; }
+  .social { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .social a { display: inline-block; padding: 12px 26px; border-radius: 30px; text-decoration: none;
+              font-weight: 700; font-size: 15px; }
+  .yt { background: var(--cream); color: var(--teal-d); }
+  .pin { background: transparent; color: var(--cream); border: 2px solid var(--cream); }
+  .social a:hover { transform: translateY(-2px); transition: .15s; }
+
+  section { max-width: 1080px; margin: 0 auto; padding: 56px 22px 8px; }
+  .kicker { text-align: center; letter-spacing: .26em; text-transform: uppercase; font-size: 13px;
+            color: var(--orange); font-weight: 700; }
+  h2 { text-align: center; font-size: clamp(26px, 4vw, 38px); margin: 10px 0 8px; color: var(--teal-d); }
+  .sect-sub { text-align: center; color: var(--muted); max-width: 560px; margin: 0 auto 38px;
+              font-size: 16.5px; line-height: 1.6; }
+
+  .shelf { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+  .book { background: var(--cream); border-radius: 16px; padding: 22px 20px 24px; text-align: center;
+          box-shadow: 0 10px 30px rgba(16,60,56,.10); display: flex; flex-direction: column;
+          transition: transform .18s ease, box-shadow .18s ease; }
+  .book:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(16,60,56,.18); }
+  .book img { width: 100%; max-width: 240px; margin: 0 auto; border-radius: 8px;
+              box-shadow: 0 12px 26px rgba(0,0,0,.22); }
+  .book h3 { font-size: 19px; margin: 18px 0 6px; color: var(--teal-d); line-height: 1.3; }
+  .book p { font-size: 14.5px; color: var(--muted); line-height: 1.55; flex: 1; }
+  .buy { display: inline-block; margin-top: 16px; padding: 11px 26px; background: var(--orange);
+         color: #fff; border-radius: 26px; text-decoration: none; font-weight: 700; font-size: 14.5px; }
+  .buy:hover { background: #d9781f; }
+  .soon { display: inline-block; margin-top: 16px; padding: 11px 26px; background: var(--muted);
+          color: #fff; border-radius: 26px; font-weight: 700; font-size: 14.5px; }
+  .badge { display: inline-block; background: var(--yellow); color: var(--ink); font-weight: 700;
+           font-size: 12px; padding: 5px 14px; border-radius: 16px; margin-bottom: 12px;
+           letter-spacing: .06em; text-transform: uppercase; }
+
+  .promise { background: var(--teal); color: var(--cream); margin-top: 64px; padding: 60px 22px; }
+  .promise-inner { max-width: 900px; margin: 0 auto; display: grid;
+                   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 34px; text-align: center; }
+  .promise h3 { color: var(--yellow); font-size: 19px; margin-bottom: 8px; }
+  .promise p { font-size: 15px; line-height: 1.6; color: #dcebe9; }
+
+  footer { text-align: center; padding: 44px 20px 56px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+  footer a { color: var(--teal); font-weight: 700; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="assets/logo.png" alt="The Gentle Bookshop logo — a cosy little bookshop with a reading hedgehog" />
+  <h1>The Gentle Bookshop</h1>
+  <div class="tagline">Gentle books for little ones and golden years</div>
+  <p class="hero-sub sans">Bold &amp; easy colouring books, beautifully illustrated children's stories, and
+     large-print puzzle books designed for seniors — including those living with dementia.
+     Every book made with care, big friendly pages, and zero stress.</p>
+  <div class="social sans">
+    <a class="yt" href="https://www.youtube.com/@TheGentleBookshop">▶ &nbsp;YouTube</a>
+    <a class="pin" href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">📌 &nbsp;Pinterest</a>
+  </div>
+</header>
+
+<section id="coloring">
+  <div class="kicker sans">Relax & unwind</div>
+  <h2>Bold &amp; Easy Colouring Books</h2>
+  <p class="sect-sub sans">Thick lines, simple cosy scenes, zero eye strain. Finish a page in one
+     quiet evening — perfect for adults who colour to relax, and easy enough for little hands too.</p>
+  <div class="shelf">
+    <div class="book">
+      <img src="assets/hedgehog.jpg" alt="Hedgehog Bold and Easy Coloring Book cover" loading="lazy" />
+      <h3>Hedgehog Bold &amp; Easy</h3>
+      <p class="sans">Cosy autumn hedgehogs in big, friendly lines.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4LQ5VT8">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <img src="assets/capybara.jpg" alt="Capybara Bold and Easy Coloring Book cover" loading="lazy" />
+      <h3>Capybara Bold &amp; Easy</h3>
+      <p class="sans">The world's calmest animal, in the world's calmest colouring book.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4C8BW8Z">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <img src="assets/axolotl.jpg" alt="Axolotl Bold and Easy Coloring Book cover" loading="lazy" />
+      <h3>Axolotl Bold &amp; Easy</h3>
+      <p class="sans">Pure serotonin — the smiliest amphibian on earth.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4RNT1M8">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <img src="assets/redpanda.jpg" alt="Red Panda Bold and Easy Coloring Book cover" loading="lazy" />
+      <h3>Red Panda Bold &amp; Easy</h3>
+      <p class="sans">Cuter than a cat, much easier to colour.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4R6WCTP">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="stories">
+  <div class="kicker sans">For little ones</div>
+  <h2>Illustrated Story Books</h2>
+  <p class="sect-sub sans">Gentle, true-to-nature tales painted like the classics — for bedtime,
+     story time, and children who love the natural world.</p>
+  <div class="shelf">
+    <div class="book">
+      <img src="assets/jackdaw.jpg" alt="The Jackdaw with a Broken Wing book cover" loading="lazy" />
+      <h3>The Jackdaw with a Broken Wing</h3>
+      <p class="sans">A young jackdaw learns to fly again — a story about kindness, beautifully illustrated.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4H9F3S1">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <img src="assets/badger.jpg" alt="The Lonely Badger book cover" loading="lazy" />
+      <h3>The Lonely Badger</h3>
+      <p class="sans">A gentle woodland tale about friendship, for quiet kids with big hearts.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4PQDQKK">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="seniors">
+  <div class="kicker sans">For golden years</div>
+  <h2>Care &amp; Comfort for Seniors</h2>
+  <p class="sect-sub sans">Practical help for caregivers, and gentle activities designed
+     especially for older adults and people living with dementia.</p>
+  <div class="shelf">
+    <div class="book">
+      <img src="assets/dementia.jpg" alt="The First 90 Days of Dementia Care book cover" loading="lazy" />
+      <h3>The First 90 Days of Dementia Care</h3>
+      <p class="sans">The calm, practical manual nobody hands you — what to do first, what to say,
+         and how to look after yourself too. By Claire Bennett.</p>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H49JJR3T">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans">Coming this week</span>
+      <img src="assets/puzzles.jpg" alt="Gentle Puzzles for Seniors book cover" loading="lazy" />
+      <h3>Gentle Puzzles for Seniors</h3>
+      <p class="sans">90 easy large-print puzzles that feel like a cup of tea, not a test.
+         Designed for older adults and people living with dementia. By Claire Bennett.</p>
+      <span class="soon sans">On Amazon soon</span>
+    </div>
+  </div>
+</section>
+
+<div class="promise sans">
+  <div class="promise-inner">
+    <div><h3>Big, friendly pages</h3><p>Large print, thick lines and breathing room on every page. Nothing fiddly, nothing straining.</p></div>
+    <div><h3>Made with care</h3><p>Every book is designed around one person: the reader holding it. Calm by design, from cover to cover.</p></div>
+    <div><h3>New books monthly</h3><p>The shelf keeps growing. Follow us on YouTube for a look inside every new release.</p></div>
+  </div>
+</div>
+
+<footer class="sans">
+  <p><strong>The Gentle Bookshop</strong> — gentle books for little ones and golden years.</p>
+  <p><a href="https://www.youtube.com/@TheGentleBookshop">YouTube</a> ·
+     <a href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">Pinterest</a></p>
+  <p>© 2026 The Gentle Bookshop. As an Amazon Associate-style storefront, links lead to Amazon product pages.</p>
+</footer>
+
+</body>
+</html>
