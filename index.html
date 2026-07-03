@@ -31,6 +31,10 @@
   .yt { background: var(--cream); color: var(--teal-d); }
   .pin { background: transparent; color: var(--cream); border: 2px solid var(--cream); }
   .social a:hover { transform: translateY(-2px); transition: .15s; }
+  .hero-video { max-width: 720px; margin: 40px auto 0; }
+  .hero-video video { width: 100%; display: block; border-radius: 18px; border: 5px solid var(--cream);
+                      box-shadow: 0 22px 54px rgba(0,0,0,.42); background: #000; }
+  .hero-video .vid-hint { margin-top: 10px; font-size: 13.5px; color: #bcd7d4; font-style: italic; }
 
   section { max-width: 1080px; margin: 0 auto; padding: 56px 22px 8px; }
   .kicker { text-align: center; letter-spacing: .26em; text-transform: uppercase; font-size: 13px;
@@ -79,6 +83,10 @@
   <div class="social sans">
     <a class="yt" href="https://www.youtube.com/@TheGentleBookshop">▶ &nbsp;YouTube</a>
     <a class="pin" href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">📌 &nbsp;Pinterest</a>
+  </div>
+  <div class="hero-video">
+    <video src="assets/hero-web.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+    <div class="vid-hint sans">Tap the speaker for sound — meet our books in under a minute</div>
   </div>
 </header>
 
