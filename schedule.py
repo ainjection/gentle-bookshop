@@ -31,9 +31,31 @@ def priority(slug):
     if 'christmas' in slug: s += 40 if start < dt.date(2026, 10, 12) else -60
     return s
 
-flips = [s for s in books if os.path.exists(f'{SHORTS}/{s}/{s}.mp4')]
+# Never schedule the same video twice: collect everything used by earlier schedules.
+used = set()
+for prev in glob.glob(f'{SHORTS}/schedule-*.json'):
+    if prev.endswith(f'schedule-{start}.json'): continue
+    for r in json.load(open(prev, encoding='utf-8')):
+        used.add(os.path.normpath(r['video']).lower())
+def fresh(path): return os.path.normpath(path).lower() not in used
+
+flips = [s for s in books if os.path.exists(f'{SHORTS}/{s}/{s}.mp4') and fresh(f'{SHORTS}/{s}/{s}.mp4')]
 flips.sort(key=priority)
-capy = sorted(glob.glob(f'{CAPY}/SHORT_page*.mp4'))
+
+# Colouring-in shorts: capybara from the July run, plus the Sep run of five more books.
+# Each entry is (path, book slug it advertises, page number).
+COLOUR_BOOKS = [('capybara', CAPY), ('hedgehog', 'D:/recordings/coloring-factory/out-hedgehog'),
+                ('axolotl', 'D:/recordings/coloring-factory/out-axolotl'),
+                ('redpanda', 'D:/recordings/coloring-factory/out-redpanda'),
+                ('sea-otter', 'D:/recordings/coloring-factory/out-sea-otter'),
+                ('animal-football', 'D:/recordings/coloring-factory/out-animal-football')]
+colour = []
+for slug, folder in COLOUR_BOOKS:
+    for v in sorted(glob.glob(f'{folder}/SHORT_page*.mp4')):
+        if fresh(v): colour.append((v, slug, int(os.path.basename(v)[10:12])))
+# interleave the books so consecutive days do not all push the same title
+colour.sort(key=lambda t: (t[2], t[1]))
+capy = colour
 rows = []; fi = ci = 0
 for d in range(days):
     day = start + dt.timedelta(days=d)
@@ -46,12 +68,13 @@ for d in range(days):
             rows.append(dict(date=str(day), slot=slot, video=f'{SHORTS}/{slug}/{slug}.mp4', book=b['short'], link=BASE + slug + '.html', board=BOARD[b['shelf']], title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
         else:
             if ci >= len(capy): continue
-            v = capy[ci]; ci += 1; n = int(os.path.basename(v)[10:12]); b = books['capybara']
-            title = f'Capybara Coloring ASMR | Bold & Easy page {n} | so satisfying'
-            desc = f'Colouring page {n} from Capybara Bold & Easy. Thick lines, big shapes, zero stress.\nLook inside the book: {BASE}capybara.html\n{TAGS["coloring"]}'
-            rows.append(dict(date=str(day), slot=slot, video=v, book='Capybara Bold & Easy (colouring page %d)' % n, link=BASE + 'capybara.html', board='Coloring Books', title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
+            v, slug, n = capy[ci]; ci += 1; b = books[slug]
+            short = b['short']
+            title = f'{short} | colouring page {n} ASMR | so satisfying'[:100]
+            desc = f'Colouring page {n} from {short}. Thick lines, big shapes, zero stress.\nLook inside the book: {BASE}{slug}.html\n{TAGS[b["shelf"]]}'
+            rows.append(dict(date=str(day), slot=slot, video=v, book=f'{short} (colouring page {n})', link=BASE + slug + '.html', board=BOARD[b['shelf']], title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
     # 22:00 image pin
-    pin_slug = flips[(d * 3) % len(flips)] if flips else 'capybara'
+    pin_slug = flips[(d * 3) % len(flips)] if flips else list(books)[d % len(books)]
     rows.append(dict(date=str(day), slot='22:00', video=f'D:/recordings/bookshop-pins/v2/pin-{pin_slug}.png', book=books[pin_slug]['short'], link=BASE + pin_slug + '.html', board=BOARD[books[pin_slug]['shelf']], title=books[pin_slug]['short'], caption=scripts[pin_slug]['hook'] + ' ' + books[pin_slug]['tagline'], channels='Pinterest image pin'))
 
 json.dump(rows, open(f'{SHORTS}/schedule-{start}.json', 'w', encoding='utf-8'), indent=1)
