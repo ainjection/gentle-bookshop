@@ -159,6 +159,8 @@ for b in books:
 
 # link index cards: cover + title go to the book page, add a Look inside link above the Amazon button
 for b in books:
+    if f'href="books/{b["slug"]}.html"' in index:
+        print(b['slug'], 'index card already linked'); continue
     pat = re.compile(r'(<div class="book">\s*(?:<span class="badge sans">[^<]*</span>\s*)?)<img src="assets/' + re.escape(b['cover']) + r'"([^>]*)/>\s*<h3>(.*?)</h3>(.*?)<a class="buy sans" href="https://www.amazon.com/dp/' + b['asin'] + '">', re.S)
     def rep(m):
         return (f'{m.group(1)}<a class="cardlink" href="books/{b["slug"]}.html"><img src="assets/{b["cover"]}"{m.group(2)}/>'
