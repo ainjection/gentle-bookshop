@@ -151,6 +151,7 @@ for b in books:
 
 <div class="lb" id="lb"><button class="prev" aria-label="Previous">&lsaquo;</button><img src="" alt="Sample page" /><button class="next" aria-label="Next">&rsaquo;</button><div class="count sans"></div></div>
 <script>{JS}</script>
+<script src="../track.js" defer></script>
 </body>
 </html>
 """
