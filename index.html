@@ -8,7 +8,7 @@
 <meta name="description" content="Bold & easy colouring books, beautifully illustrated children's stories, and large-print puzzle books for seniors. Every book made with care, big friendly pages, and zero stress." />
 <meta property="og:title" content="The Gentle Bookshop" />
 <meta property="og:description" content="Gentle books for little ones and golden years — colouring books, children's stories and large-print puzzles for seniors." />
-<meta property="og:image" content="assets/logo.png" />
+<meta property="og:image" content="https://ainjection.github.io/gentle-bookshop/assets/logo.png" />
 <style>
   :root {
     --teal: #105c64; --teal-d: #0b454c; --teal-l: #1a7a84;
@@ -73,6 +73,10 @@
 
   footer { text-align: center; padding: 44px 20px 56px; color: var(--muted); font-size: 14px; line-height: 1.8; }
   footer a { color: var(--teal); font-weight: 700; text-decoration: none; }
+  .shelfnav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px auto 6px;max-width:820px}
+  .shelfnav a{display:inline-block;padding:8px 16px;border-radius:22px;text-decoration:none;
+       font-size:.92rem;font-weight:600;background:rgba(0,0,0,.06);color:inherit;border:1px solid rgba(0,0,0,.10)}
+  .shelfnav a:hover{background:rgba(0,0,0,.12)}
 </style>
 </head>
 <body>
@@ -81,12 +85,22 @@
   <img class="logo" src="assets/logo.png" alt="The Gentle Bookshop logo — a cosy little bookshop with a reading hedgehog" />
   <h1>The Gentle Bookshop</h1>
   <div class="tagline">Gentle books for little ones and golden years</div>
+  <nav class="shelfnav sans">
+    <a href="#coloring">Colouring</a>
+    <a href="#grayscale">Grayscale</a>
+    <a href="#stories">Story Books</a>
+    <a href="#learning">Learning</a>
+    <a href="#seekfind">Seek &amp; Find</a>
+    <a href="#puzzles-games">Puzzles</a>
+    <a href="#seniors">Seniors</a>
+    <a href="#gifts">Gifts</a>
+  </nav>
   <p class="hero-sub sans">Bold &amp; easy colouring books, beautifully illustrated children's stories, and
      large-print puzzle books designed for seniors — including those living with dementia.
      Every book made with care, big friendly pages, and zero stress.</p>
   <div class="social sans">
-    <a class="yt" href="https://www.youtube.com/@TheGentleBookshop">▶ &nbsp;YouTube</a>
-    <a class="pin" href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">📌 &nbsp;Pinterest</a>
+    <a class="yt" href="https://www.youtube.com/@TheGentleBookshop">YouTube</a>
+    <a class="pin" href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">Pinterest</a>
   </div>
   <div class="hero-video">
     <video src="assets/hero-web.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
@@ -97,7 +111,7 @@
 <section id="coloring">
   <div class="kicker sans">Relax & unwind</div>
   <h2>Bold &amp; Easy Colouring Books</h2>
-  <p class="sect-sub sans">Thick lines, simple cosy scenes, zero eye strain. Finish a page in one
+  <p class="sect-sub sans">Thick lines, simple cosy scenes, easy on the eyes. Finish a page in one
      quiet evening — perfect for adults who colour to relax, and easy enough for little hands too.</p>
   <div class="shelf">
     <div class="book">
@@ -209,13 +223,6 @@
       <a class="peek sans" href="books/christmas-grayscale-complete.html">Look inside</a>
       <a class="buy sans" href="https://www.amazon.com/dp/B0HHBZK7S1">Get it on Amazon</a>
     </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/dogs-mystery-mosaics.html"><img src="assets/dogs-mystery-mosaics.jpg" alt="100 Dogs Monochrome Mystery Mosaics cover" loading="lazy" /><h3>100 Dogs Mystery Mosaics</h3></a>
-      <p class="sans">One-pen colour-by-number. 100 hidden dog pictures reveal themselves square by square.</p>
-      <a class="peek sans" href="books/dogs-mystery-mosaics.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HH7G1D5P">Get it on Amazon</a>
-    </div>
   </div>
 </section>
 
@@ -276,14 +283,14 @@
 
 <section id="learning">
   <div class="kicker sans">Learn &amp; practise</div>
-  <h2>Handwriting &amp; Learning Workbooks</h2>
+  <h2>Handwriting, Learning &amp; Focus</h2>
   <p class="sect-sub sans">Patient, structured practice books that meet children where they are —
      built around trace-and-fade methods teachers actually use.</p>
   <div class="shelf">
     <div class="book">
       <span class="badge sans">New release</span>
       <a class="cardlink" href="books/dysgraphia-kids.html"><img src="assets/dysgraphia-kids.jpg" alt="Dysgraphia Handwriting Workbook for Kids cover" loading="lazy" /><h3>Dysgraphia Workbook: Kids</h3></a>
-      <p class="sans">Trace-and-fade practice that makes handwriting finally click. Ages 6-10.</p>
+      <p class="sans">Trace-and-fade practice that makes handwriting finally click. Ages 6 to 9.</p>
       <a class="peek sans" href="books/dysgraphia-kids.html">Look inside</a>
       <a class="buy sans" href="https://www.amazon.com/dp/B0H7B8ZMBN">Get it on Amazon</a>
     </div>
@@ -313,6 +320,14 @@
       <p class="sans">Model letters on the RIGHT so a left hand never covers them, plus paper-angle guides.</p>
       <a class="peek sans" href="books/left-handed-handwriting.html">Look inside</a>
       <a class="buy sans" href="https://www.amazon.com/dp/B0HGNPYQ7P">Get it on Amazon</a>
+    </div>
+  
+      <div class="book">
+      <span class="badge sans">New release</span>
+      <a class="cardlink" href="books/adhd-5-minute-reset.html"><img src="assets/adhd-5-minute-reset.jpg" alt="The 5-Minute Reset undated ADHD planner cover" loading="lazy" /><h3>The 5-Minute Reset</h3></a>
+      <p class="sans">The undated ADHD planner that forgives the days you fall off.</p>
+      <a class="peek sans" href="books/adhd-5-minute-reset.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4VPZDQL">Get it on Amazon</a>
     </div>
   </div>
 </section>
@@ -347,6 +362,36 @@
   </div>
 </section>
 
+<section id="puzzles-games">
+  <div class="kicker sans">Something to solve</div>
+  <h2>Puzzles &amp; Brain Games</h2>
+  <p class="sect-sub sans">Word searches and colour-by-number grids in comfortable large print.
+     Sit down with a cup of tea and lose half an hour.</p>
+  <div class="shelf">
+    <div class="book">
+      <span class="badge sans">New release</span>
+      <a class="cardlink" href="books/halloween-word-search-easy.html"><img src="assets/halloween-word-search-easy.jpg" alt="Happy Halloween Word Search Easy cover" loading="lazy" /><h3>Halloween Word Search: Easy</h3></a>
+      <p class="sans">80 easy large-print puzzles for adults and seniors. By Nora Pemberton.</p>
+      <a class="peek sans" href="books/halloween-word-search-easy.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HG5NLN8R">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans">New release</span>
+      <a class="cardlink" href="books/halloween-word-search-hard.html"><img src="assets/halloween-word-search-hard.jpg" alt="Happy Halloween Word Search Hard cover" loading="lazy" /><h3>Halloween Word Search: Hard</h3></a>
+      <p class="sans">80 harder large-print puzzles for adults and seniors. By Nora Pemberton.</p>
+      <a class="peek sans" href="books/halloween-word-search-hard.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHXQ9NFH">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans">New release</span>
+      <a class="cardlink" href="books/dogs-mystery-mosaics.html"><img src="assets/dogs-mystery-mosaics.jpg" alt="100 Dogs Monochrome Mystery Mosaics cover" loading="lazy" /><h3>100 Dogs Mystery Mosaics</h3></a>
+      <p class="sans">One-pen colour-by-number. 100 hidden dog pictures reveal themselves square by square.</p>
+      <a class="peek sans" href="books/dogs-mystery-mosaics.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HH7G1D5P">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
 <section id="seniors">
   <div class="kicker sans">For golden years</div>
   <h2>Care &amp; Comfort for Seniors</h2>
@@ -367,27 +412,6 @@
          Designed for older adults and people living with dementia. By Claire Bennett.</p>
       <a class="peek sans" href="books/puzzles.html">Look inside</a>
       <a class="buy sans" href="https://www.amazon.com/dp/B0H4RZPM7P">Get it on Amazon</a>
-    </div>
-      <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/adhd-5-minute-reset.html"><img src="assets/adhd-5-minute-reset.jpg" alt="The 5-Minute Reset undated ADHD planner cover" loading="lazy" /><h3>The 5-Minute Reset</h3></a>
-      <p class="sans">The undated ADHD planner that forgives the days you fall off.</p>
-      <a class="peek sans" href="books/adhd-5-minute-reset.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4VPZDQL">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-word-search-easy.html"><img src="assets/halloween-word-search-easy.jpg" alt="Happy Halloween Word Search Easy cover" loading="lazy" /><h3>Halloween Word Search: Easy</h3></a>
-      <p class="sans">80 easy large-print puzzles for adults and seniors. By Nora Pemberton.</p>
-      <a class="peek sans" href="books/halloween-word-search-easy.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HG5NLN8R">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-word-search-hard.html"><img src="assets/halloween-word-search-hard.jpg" alt="Happy Halloween Word Search Hard cover" loading="lazy" /><h3>Halloween Word Search: Hard</h3></a>
-      <p class="sans">80 harder large-print puzzles for adults and seniors. By Nora Pemberton.</p>
-      <a class="peek sans" href="books/halloween-word-search-hard.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHXQ9NFH">Get it on Amazon</a>
     </div>
 </div>
 </section>
@@ -431,7 +455,7 @@
 
 <div class="promise sans">
   <div class="promise-inner">
-    <div><h3>Big, friendly pages</h3><p>Large print, thick lines and breathing room on every page. Nothing fiddly, nothing straining.</p></div>
+    <div><h3>Big, friendly pages</h3><p>Large print, thick lines and breathing room on every page. Nothing fiddly, nothing cramped.</p></div>
     <div><h3>Made with care</h3><p>Every book is designed around one person: the reader holding it. Calm by design, from cover to cover.</p></div>
     <div><h3>New books monthly</h3><p>The shelf keeps growing. Follow us on YouTube for a look inside every new release.</p></div>
   </div>
@@ -441,7 +465,7 @@
   <p><strong>The Gentle Bookshop</strong> — gentle books for little ones and golden years.</p>
   <p><a href="https://www.youtube.com/@TheGentleBookshop">YouTube</a> ·
      <a href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">Pinterest</a></p>
-  <p>© 2026 The Gentle Bookshop. As an Amazon Associate-style storefront, links lead to Amazon product pages.</p>
+  <p>© 2026 The Gentle Bookshop. All links lead to our books on Amazon.</p>
 </footer>
 
 <script src="track.js" defer></script>

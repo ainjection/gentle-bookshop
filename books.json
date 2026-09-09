@@ -38,7 +38,7 @@
   "short": "Dysgraphia Workbook: Kids",
   "cover": "dysgraphia-kids.jpg",
   "shelf": "learning",
-  "shelf_name": "Handwriting & Learning Workbooks",
+  "shelf_name": "Handwriting, Learning & Focus",
   "tagline": "Handwriting feels like a mountain for a child with dysgraphia. This workbook turns it into small, kind steps.",
   "who": "Parents of children aged 6 to 9 with dysgraphia or messy handwriting, teachers and teaching assistants, occupational therapy home practice, and homeschool handwriting lessons. Left-handed friendly.",
   "facts": [
@@ -315,8 +315,8 @@
   "title": "100 Dogs Monochrome Mystery Mosaics: Color by Number One Pen Coloring Book for Adults, 100 Hidden Dog Pictures to Reveal with a Single Pen",
   "short": "100 Dogs Mystery Mosaics",
   "cover": "dogs-mystery-mosaics.jpg",
-  "shelf": "grayscale",
-  "shelf_name": "Detailed Grayscale Colouring",
+  "shelf": "puzzles-games",
+  "shelf_name": "Puzzles & Brain Games",
   "tagline": "One pen. Six simple marks. One hundred hidden dogs.",
   "who": "Dog lovers, puzzle fans, and anyone who enjoys colour by number, pixel art or cross-stitch style reveals. No colours to choose, no artistic skill needed, just a black pen and a few quiet minutes. Good for evenings, holidays, waiting rooms and screen-free time.",
   "facts": [
@@ -647,7 +647,7 @@
   "short": "Dysgraphia Workbook: Teens",
   "cover": "dysgraphia-teens.jpg",
   "shelf": "learning",
-  "shelf_name": "Handwriting & Learning Workbooks",
+  "shelf_name": "Handwriting, Learning & Focus",
   "tagline": "A handwriting workbook that finally treats an older writer their age.",
   "who": "Teens and tweens aged 10 to 14 with dysgraphia or messy handwriting. Occupational therapy home practice, homeschool and classroom support, and older students catching up on legible, faster writing. Left-handed friendly.",
   "facts": [
@@ -678,7 +678,7 @@
   "short": "Left-Handed Letter Tracing",
   "cover": "left-handed-tracing.jpg",
   "shelf": "learning",
-  "shelf_name": "Handwriting & Learning Workbooks",
+  "shelf_name": "Handwriting, Learning & Focus",
   "tagline": "A guide letter at both ends of every row, so a left hand never hides the example.",
   "who": "Left-handed children aged 3 to 5 starting to write, in preschool, pre-K or kindergarten. Left-handed parents who remember the smudged pages, and any parent who wants to give a little lefty the kindest possible start.",
   "facts": [
@@ -709,7 +709,7 @@
   "short": "Left-Handed Handwriting Workbook",
   "cover": "left-handed-handwriting.jpg",
   "shelf": "learning",
-  "shelf_name": "Handwriting & Learning Workbooks",
+  "shelf_name": "Handwriting, Learning & Focus",
   "tagline": "The model letter sits on the right, so it stays in view for the whole row.",
   "who": "Left-handed children aged 5 to 10. Home practice, classroom and SEN support, occupational therapy, holiday catch-up, and any parent who has watched a lefty get quietly frustrated with a book that was never designed for them.",
   "facts": [
@@ -740,7 +740,7 @@
   "short": "Pre-Writing Skills for Little Hands",
   "cover": "pre-writing-skills.jpg",
   "shelf": "learning",
-  "shelf_name": "Handwriting & Learning Workbooks",
+  "shelf_name": "Handwriting, Learning & Focus",
   "tagline": "The book that comes before a handwriting workbook.",
   "who": "Children aged 4 to 6 in nursery and reception. Home practice before school starts, summer preparation, occupational therapy warm-ups, and any parent who has been told their child needs to work on their handwriting and does not know where to begin.",
   "facts": [
@@ -770,8 +770,8 @@
   "title": "Happy Halloween Word Search: 80 Easy Large Print Puzzles for Adults and Seniors",
   "short": "Halloween Word Search: Easy",
   "cover": "halloween-word-search-easy.jpg",
-  "shelf": "seniors",
-  "shelf_name": "Care & Comfort for Seniors",
+  "shelf": "puzzles-games",
+  "shelf_name": "Puzzles & Brain Games",
   "tagline": "Big letters. Easy words. No tricks.",
   "who": "Adults and seniors who want a puzzle book they can read without straining, readers with tired eyes or low vision, and anyone buying a gift for a parent or grandparent who has given up on small-print books. Works well as a group activity in care homes and day centres.",
   "facts": [
@@ -801,8 +801,8 @@
   "title": "Happy Halloween Word Search: 80 Hard Large Print Puzzles for Adults and Seniors",
   "short": "Halloween Word Search: Hard",
   "cover": "halloween-word-search-hard.jpg",
-  "shelf": "seniors",
-  "shelf_name": "Care & Comfort for Seniors",
+  "shelf": "puzzles-games",
+  "shelf_name": "Puzzles & Brain Games",
   "tagline": "Big letters, all eight directions, nothing is off limits.",
   "who": "Word search regulars who find the easy books over in ten minutes. Adults and seniors who still want genuinely large print but a proper challenge, and a good gift for the puzzler in the family who says the usual books are too simple.",
   "facts": [
@@ -1191,8 +1191,8 @@
   "title": "The 5-Minute Reset: An Undated ADHD Planner That Forgives the Days You Fall Off",
   "short": "The 5-Minute Reset",
   "cover": "adhd-5-minute-reset.jpg",
-  "shelf": "seniors",
-  "shelf_name": "Care & Comfort for Seniors",
+  "shelf": "learning",
+  "shelf_name": "Handwriting, Learning & Focus",
   "tagline": "Most ADHD planners are normal planners with ADHD printed on the cover. This one is built differently.",
   "who": "Adults with ADHD who have a drawer full of abandoned planners. Undated and forgiveness-first: miss a day, a week or a month and there is nothing to catch up on. Open the next page and begin again.",
   "facts": [
