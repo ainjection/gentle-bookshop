@@ -9,8 +9,14 @@ SITE = 'D:/recordings/gentle-bookshop-site'
 SHORTS = 'D:/gentle-shorts-media'
 CAPY = 'D:/recordings/coloring-factory/out'
 BASE = 'https://ainjection.github.io/gentle-bookshop/books/'
+HOME = 'https://ainjection.github.io/gentle-bookshop/'
+def tag(url, src):
+    """Stamp the traffic source onto a link. TikTok and Instagram in-app browsers
+    strip the referrer, so this tag is the only reliable attribution signal."""
+    return url + ('&' if '?' in url else '?') + 'src=' + src
+
 BOARD = {'coloring': 'Coloring Books', 'grayscale': 'Coloring Books', 'learning': 'Handwriting & Learning', 'stories': 'Kids Bedtime Stories',
-         'seekfind': 'Seek & Find', 'seniors': 'amazon kdp', 'gifts': 'amazon kdp'}
+         'seekfind': 'Seek & Find', 'seniors': 'amazon kdp', 'gifts': 'amazon kdp', 'puzzles-games': 'amazon kdp'}
 SLOTS = ['08:00', '11:00', '14:00', '17:00', '19:30']
 TAGS = {'coloring': '#coloringbook #boldandeasy #coloringasmr #kidsactivities #amazonfinds',
         'grayscale': '#grayscalecoloring #adultcoloring #coloringbook #coloredpencils #halloween',
@@ -18,6 +24,7 @@ TAGS = {'coloring': '#coloringbook #boldandeasy #coloringasmr #kidsactivities #a
         'stories': '#bedtimestory #kidsbooks #picturebook #readaloud #childrensbooks',
         'seekfind': '#seekandfind #hiddenpictures #kidsactivities #activitybook #screenfree',
         'seniors': '#wordsearch #largeprint #seniors #dementia #puzzlebook',
+        'puzzles-games': '#wordsearch #largeprint #puzzlebook #braingames #halloween',
         'gifts': '#birthdaygift #bornin #nostalgia #giftideas #trivia'}
 
 books = {b['slug']: b for b in json.load(open(f'{SITE}/books.json', encoding='utf-8'))}
@@ -64,18 +71,18 @@ for d in range(days):
         if use_flip:
             slug = flips[fi]; fi += 1; b = books[slug]; sc = scripts[slug]
             title = f'{b["short"]} | {sc["hook"]} | Look inside'[:100]
-            desc = f'{sc["hook"]} {b["tagline"]}\nLook inside every page: {BASE}{slug}.html\n{b["who"]}\nMore gentle books: https://ainjection.github.io/gentle-bookshop/\n{TAGS[b["shelf"]]}'
-            rows.append(dict(date=str(day), slot=slot, video=f'{SHORTS}/{slug}/{slug}.mp4', book=b['short'], link=BASE + slug + '.html', board=BOARD[b['shelf']], title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
+            desc = f'{sc["hook"]} {b["tagline"]}\nLook inside every page: {tag(BASE + slug + ".html", "youtube")}\n{b["who"]}\nMore gentle books: {tag(HOME, "youtube")}\n{TAGS[b["shelf"]]}'
+            rows.append(dict(date=str(day), slot=slot, video=f'{SHORTS}/{slug}/{slug}.mp4', book=b['short'], link=tag(BASE + slug + '.html', 'pinterest'), board=BOARD[b['shelf']], title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
         else:
             if ci >= len(capy): continue
             v, slug, n = capy[ci]; ci += 1; b = books[slug]
             short = b['short']
             title = f'{short} | colouring page {n} ASMR | so satisfying'[:100]
             desc = f'Colouring page {n} from {short}. Thick lines, big shapes, zero stress.\nLook inside the book: {BASE}{slug}.html\n{TAGS[b["shelf"]]}'
-            rows.append(dict(date=str(day), slot=slot, video=v, book=f'{short} (colouring page {n})', link=BASE + slug + '.html', board=BOARD[b['shelf']], title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
+            rows.append(dict(date=str(day), slot=slot, video=v, book=f'{short} (colouring page {n})', link=tag(BASE + slug + '.html', 'pinterest'), board=BOARD[b['shelf']], title=title, caption=desc, channels='YouTube, TikTok, Pinterest video'))
     # 22:00 image pin
     pin_slug = flips[(d * 3) % len(flips)] if flips else list(books)[d % len(books)]
-    rows.append(dict(date=str(day), slot='22:00', video=f'D:/recordings/bookshop-pins/v2/pin-{pin_slug}.png', book=books[pin_slug]['short'], link=BASE + pin_slug + '.html', board=BOARD[books[pin_slug]['shelf']], title=books[pin_slug]['short'], caption=scripts[pin_slug]['hook'] + ' ' + books[pin_slug]['tagline'], channels='Pinterest image pin'))
+    rows.append(dict(date=str(day), slot='22:00', video=f'D:/recordings/bookshop-pins/v2/pin-{pin_slug}.png', book=books[pin_slug]['short'], link=tag(BASE + pin_slug + '.html', 'pinterest'), board=BOARD[books[pin_slug]['shelf']], title=books[pin_slug]['short'], caption=scripts[pin_slug]['hook'] + ' ' + books[pin_slug]['tagline'], channels='Pinterest image pin'))
 
 json.dump(rows, open(f'{SHORTS}/schedule-{start}.json', 'w', encoding='utf-8'), indent=1)
 with open(f'{SHORTS}/SCHEDULE-{start}.md', 'w', encoding='utf-8') as f:
