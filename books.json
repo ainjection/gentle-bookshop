@@ -1277,5 +1277,30 @@
   "related": [
    "puzzles"
   ]
+ },
+ {
+  "slug": "big-book-of-why-little-ones",
+  "asin": "B0HKBW1Q8G",
+  "title": "The Big Book of Why for Little Ones: 1,000 Questions and Answers for Curious Toddlers, Ages 2 to 5",
+  "short": "Big Book of Why for Little Ones",
+  "cover": "big-book-of-why-little-ones.jpg",
+  "shelf": "curious",
+  "shelf_name": "Curious Kids",
+  "tagline": "1,000 questions, a picture for every one, for the youngest askers.",
+  "who": "Toddlers and pre-schoolers aged 2 to 5 and the grown-ups reading with them.",
+  "facts": [
+   "184 pages, full colour",
+   "8.5 x 11 in",
+   "Ages 2 to 5",
+   "1,000 questions, ten chapters",
+   "Paperback, $18.99. Also on Kindle"
+  ],
+  "samples": 7,
+  "description": [
+   "1,000 questions and answers with a colourful illustration for every question and short explanations to read aloud."
+  ],
+  "related": [
+   "curious"
+  ]
  }
 ]
