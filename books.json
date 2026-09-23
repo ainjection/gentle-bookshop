@@ -1305,7 +1305,7 @@
  },
  {
   "slug": "halloween-mosaics-vol1",
-  "asin": "",
+  "asin": "B0HKDV7FFW",
   "title": "Halloween Mystery Mosaics, Volume One: Color by Number for Kids Ages 6-12, 50 Hidden Pictures to Reveal",
   "short": "Halloween Mystery Mosaics, Volume One",
   "cover": "halloween-mosaics-vol1.jpg",
@@ -1329,11 +1329,12 @@
   ],
   "related": [
    "mosaics"
-  ]
+  ],
+  "buy": "https://www.amazon.com/dp/B0HKDV7FFW"
  },
  {
   "slug": "halloween-mosaics-vol2",
-  "asin": "",
+  "asin": "B0HKDD3VKC",
   "title": "Halloween Mystery Mosaics, Volume Two: Color by Number for Kids Ages 6-12, 50 More Hidden Pictures to Reveal",
   "short": "Halloween Mystery Mosaics, Volume Two",
   "cover": "halloween-mosaics-vol2.jpg",
@@ -1357,11 +1358,12 @@
   ],
   "related": [
    "mosaics"
-  ]
+  ],
+  "buy": "https://www.amazon.com/dp/B0HKDD3VKC"
  },
  {
   "slug": "halloween-mosaics-complete",
-  "asin": "",
+  "asin": "B0HKDCMRS1",
   "title": "Halloween Mystery Mosaics: The Complete Collection: Color by Number for Kids Ages 6-12, 100 Hidden Pictures, Volumes One and Two in One Book",
   "short": "Halloween Mystery Mosaics: The Complete Collection",
   "cover": "halloween-mosaics-complete.jpg",
@@ -1385,7 +1387,8 @@
   ],
   "related": [
    "mosaics"
-  ]
+  ],
+  "buy": "https://www.amazon.com/dp/B0HKDCMRS1"
  },
  {
   "slug": "chair-tai-chi",
