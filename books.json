@@ -1444,5 +1444,63 @@
    "seniors"
   ],
   "buy": "https://www.amazon.com/dp/B0HKS8XR7X"
+ },
+ {
+  "shelf": "learning",
+  "shelf_name": "Handwriting, Learning & Focus",
+  "slug": "dysgraphia-highschool",
+  "asin": "B0HJDKRRDH",
+  "title": "Dysgraphia Handwriting Workbook for High School: Speed, Legibility and Note-Taking Practice for Ages 14-18",
+  "short": "Dysgraphia Workbook: High School",
+  "cover": "dysgraphia-highschool.jpg",
+  "tagline": "By fifteen, nobody needs another workbook that starts with the letter A. This one fixes the writing that has to happen at speed.",
+  "who": "Students aged 14 to 18 with dysgraphia or handwriting that breaks down at speed, and the parents, tutors and occupational therapists supporting them. Left-handed friendly.",
+  "facts": [
+   "120 pages",
+   "8.5 x 11 in",
+   "Ages 14 to 18",
+   "Note-taking and exam writing drills",
+   "Paperback, $9.99"
+  ],
+  "samples": 8,
+  "description": [
+   "If your teenager has dysgraphia, the problem at this age is rarely forming letters. It is that writing costs so much effort they cannot keep up: notes go half finished, exam answers run out of time before they run out of ideas, and the handwriting falls apart in the last paragraph, exactly where the marks are.",
+   "It starts with a timed writing sample and a six-point legibility check that decides what to work on first. Then the eleven letter pairs that collapse under speed (a and o, r and n, b and d and more), each shown with its stroke order, the usual mistake and a model, then used inside real words.",
+   "After that: letter height, slant, spacing and the baseline, moving down to ordinary ruled paper; numbers, dates and maths in columns; forms, messages and homework records; note-taking with shorthand and Cornell layout; and exam answers planned and written with the support removed step by step. It closes with the same timed sample, so there is something real to compare."
+  ],
+  "related": [
+   "B0H7D6LNHF",
+   "B0H7B8ZMBN"
+  ],
+  "buy": "https://www.amazon.com/dp/B0HJDKRRDH"
+ },
+ {
+  "shelf": "learning",
+  "shelf_name": "Handwriting, Learning & Focus",
+  "slug": "dysgraphia-cursive",
+  "asin": "B0HJRP8S6F",
+  "title": "Dysgraphia Cursive Handwriting Workbook: Trace-and-Fade Joined-Up Practice for Ages 8-13",
+  "short": "Dysgraphia Workbook: Cursive",
+  "cover": "dysgraphia-cursive.jpg",
+  "tagline": "Joined-up writing, one stroke at a time. Cursive taught the way struggling writers actually learn it.",
+  "who": "Children aged 8 to 13 with dysgraphia or messy handwriting who are starting or struggling with cursive. Home practice, homeschool, classroom and occupational therapy support. Left-handed friendly.",
+  "facts": [
+   "114 pages",
+   "8.5 x 11 in",
+   "Ages 8 to 13",
+   "Letter joins and speed drills",
+   "Paperback, $9.99"
+  ],
+  "samples": 8,
+  "description": [
+   "Cursive is where a lot of struggling writers quietly give up. The letters arrive all at once, the joins are never actually taught, and a child who was managing print is suddenly told to speed up and join up in the same week. This book slows that down.",
+   "Letters are grouped by the stroke that starts them, not by the alphabet. Learn the undercurve once and it gives you i, u, t, w and r; learn the overcurve and it gives you n, m, v, y and x. Then the joins, then whole words, then sentences, then pages with no models at all.",
+   "Every page uses trace-and-fade: a dark model, lighter ones, start dots, then an empty line to write it cold. Every row has a model letter at both ends, so a left hand never hides the example, and there is a page on paper angle and grip written for left-handers."
+  ],
+  "related": [
+   "B0H7D6LNHF",
+   "B0H7B8ZMBN"
+  ],
+  "buy": "https://www.amazon.com/dp/B0HJRP8S6F"
  }
 ]
