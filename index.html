@@ -77,37 +77,495 @@
   .shelfnav a{display:inline-block;padding:8px 16px;border-radius:22px;text-decoration:none;
        font-size:.92rem;font-weight:600;background:rgba(0,0,0,.06);color:inherit;border:1px solid rgba(0,0,0,.10)}
   .shelfnav a:hover{background:rgba(0,0,0,.12)}
+
+  /* 23 Sep 2026 revamp: compact hero, best sellers first */
+  header { padding-top: 34px !important; padding-bottom: 34px !important; }
+  .hero-grid > * { min-width: 0; }
+  .hero-grid { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: center; text-align: left; }
+  .hero-text .logo { width: 84px; height: 84px; border-width: 4px; float: left; margin: 4px 18px 0 0; }
+  .hero-text h1 { margin: 0 0 4px; font-size: clamp(32px, 3.9vw, 46px); line-height: 1.05; }
+  .hero-text .shelfnav { clear: both; padding-top: 10px; }
+  .hero-text .hero-sub { margin: 14px 0 0; max-width: none; }
+  .hero-text .social { justify-content: flex-start; margin-top: 20px; }
+  .hero-text .shelfnav { justify-content: flex-start; }
+  .hero-grid .hero-video { margin: 0; max-width: none; }
+  .social a.shopbest { background: var(--orange) !important; color: #fff !important; border-color: var(--orange) !important; }
+  .shelfnav a.nav-hot { background: var(--yellow); color: var(--ink); }
+  section.featured { background: #fff7e8; }
+  section.seasonal { background: #f7efe6; }
+  .badge.badge-best { background: var(--orange); color: #fff; }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 22px; }
+    .hero-text .social, .hero-text .shelfnav { justify-content: center; }
+    .hero-grid .hero-video { display: none; }
+    .hero-text .logo { float: none; margin: 0 auto 10px; display: block; }
+  }
 </style>
 </head>
 <body>
 
 <header>
+ <div class="hero-grid">
+  <div class="hero-text">
   <img class="logo" src="assets/logo.png" alt="The Gentle Bookshop logo — a cosy little bookshop with a reading hedgehog" />
   <h1>The Gentle Bookshop</h1>
   <div class="tagline">Gentle books for little ones and golden years</div>
   <nav class="shelfnav sans">
-    <a href="#coloring">Colouring</a>
-    <a href="#grayscale">Grayscale</a>
-    <a href="#stories">Story Books</a>
-    <a href="#curious">Curious Kids</a>
+    <a class="nav-hot" href="#bestsellers">Best Sellers</a>
+    <a class="nav-hot" href="#halloween">Halloween</a>
+    <a class="nav-hot" href="#new">New</a>
     <a href="#learning">Learning</a>
+    <a href="#curious">Curious Kids</a>
+    <a href="#seniors">Seniors</a>
+    <a href="#grayscale">Grayscale</a>
     <a href="#seekfind">Seek &amp; Find</a>
     <a href="#puzzles-games">Puzzles</a>
-    <a href="#seniors">Seniors</a>
     <a href="#gifts">Gifts</a>
+    <a href="#stories">Story Books</a>
+    <a href="#coloring">Colouring</a>
   </nav>
-  <p class="hero-sub sans">Bold &amp; easy colouring books, beautifully illustrated children's stories, and
-     large-print puzzle books designed for seniors — including those living with dementia.
-     Every book made with care, big friendly pages, and zero stress.</p>
+  <p class="hero-sub sans">Handwriting workbooks for children who find writing hard, large-print books for seniors, colouring, puzzles and stories. Every book made with care: big friendly pages and zero stress.</p>
   <div class="social sans">
+    <a class="shopbest" href="#bestsellers">Shop our best sellers</a>
     <a class="yt" href="https://www.youtube.com/@TheGentleBookshop">YouTube</a>
     <a class="pin" href="https://www.pinterest.com/digitalexpress77/amazon-kdp/">Pinterest</a>
+  </div>
   </div>
   <div class="hero-video">
     <video src="assets/hero-web.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
     <div class="vid-hint sans">Tap the speaker for sound — meet our books in under a minute</div>
   </div>
+ </div>
 </header>
+
+<section id="bestsellers" class="featured">
+  <div class="kicker sans">Readers&rsquo; favourites</div>
+  <h2>Our Best Sellers</h2>
+  <p class="sect-sub sans">The books people come back for: calm, step-by-step handwriting help for children who find writing hard, left-handers included, and our Big Book of Why.</p>
+  <div class="shelf">
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/dysgraphia-teens.html"><img src="assets/dysgraphia-teens.jpg" alt="Dysgraphia Handwriting Workbook for Teens cover" loading="lazy" /><h3>Dysgraphia Workbook: Teens</h3></a>
+      <p class="sans">Handwriting help that doesn&rsquo;t talk down to them. Ages 10-14.</p>
+      <a class="peek sans" href="books/dysgraphia-teens.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7D6LNHF">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/dysgraphia-kids.html"><img src="assets/dysgraphia-kids.jpg" alt="Dysgraphia Handwriting Workbook for Kids cover" loading="lazy" /><h3>Dysgraphia Workbook: Kids</h3></a>
+      <p class="sans">Trace-and-fade practice that makes handwriting finally click. Ages 6 to 9.</p>
+      <a class="peek sans" href="books/dysgraphia-kids.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7B8ZMBN">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/left-handed-handwriting.html"><img src="assets/left-handed-handwriting.jpg" alt="Left-Handed Handwriting Workbook for Kids cover" loading="lazy" /><h3>Left-Handed Handwriting Workbook</h3></a>
+      <p class="sans">Model letters on the RIGHT so a left hand never covers them, plus paper-angle guides.</p>
+      <a class="peek sans" href="books/left-handed-handwriting.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGNPYQ7P">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/pre-writing-skills.html"><img src="assets/pre-writing-skills.jpg" alt="Pre-Writing Skills Workbook for Little Hands cover" loading="lazy" /><h3>Pre-Writing Skills for Little Hands</h3></a>
+      <p class="sans">Shapes, lines and tracing paths before letters. Big guides for the youngest writers.</p>
+      <a class="peek sans" href="books/pre-writing-skills.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGMMBQSD">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/left-handed-tracing.html"><img src="assets/left-handed-tracing.jpg" alt="Left-Handed Letter Tracing for Kids cover" loading="lazy" /><h3>Left-Handed Letter Tracing</h3></a>
+      <p class="sans">Made for lefties from the very first letter. Ages 3-5.</p>
+      <a class="peek sans" href="books/left-handed-tracing.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H65D8H1N">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/big-book-of-why-little-ones.html"><img src="assets/big-book-of-why-little-ones.jpg" alt="The Big Book of Why for Little Ones cover" loading="lazy" /><h3>The Big Book of Why for Little Ones</h3></a>
+      <p class="sans">1,000 questions and answers for two to five year olds, a picture for every one. Book 3 of the series.</p>
+      <a class="peek sans" href="books/big-book-of-why-little-ones.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HKBW1Q8G">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="halloween" class="seasonal">
+  <div class="kicker sans">Halloween is on 31 October</div>
+  <h2>Halloween Books</h2>
+  <p class="sect-sub sans">Everything spooky in one place: grayscale colouring for grown-ups, hidden-picture mosaics and seek and find for kids, and large-print word searches for all ages.</p>
+  <div class="shelf">
+    <div class="book">
+      <a class="cardlink" href="books/halloween-grayscale-complete.html"><img src="assets/halloween-grayscale-complete.jpg" alt="Halloween Grayscale Complete Collection cover" loading="lazy" /><h3>Halloween Grayscale: Complete Collection</h3></a>
+      <p class="sans">All 100 designs from Volumes One and Two in a single book.</p>
+      <a class="peek sans" href="books/halloween-grayscale-complete.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGVDWKP4">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-grayscale-vol1.html"><img src="assets/halloween-grayscale-vol1.jpg" alt="Halloween Grayscale Coloring Book Volume One cover" loading="lazy" /><h3>Halloween Grayscale: Vol. 1</h3></a>
+      <p class="sans">50 detailed owls, pumpkins, haunted houses and botanical studies for colored pencils.</p>
+      <a class="peek sans" href="books/halloween-grayscale-vol1.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGVBNKZS">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-grayscale-vol2.html"><img src="assets/halloween-grayscale-vol2.jpg" alt="Halloween Grayscale Coloring Book Volume Two cover" loading="lazy" /><h3>Halloween Grayscale: Vol. 2</h3></a>
+      <p class="sans">50 Victorian Gothic scenes of skeletons, ghosts, witches and haunted houses.</p>
+      <a class="peek sans" href="books/halloween-grayscale-vol2.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGVLK1VQ">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-mosaics-complete.html"><img src="assets/halloween-mosaics-complete.jpg" alt="Halloween Mystery Mosaics: The Complete Collection cover" loading="lazy" /><h3>Halloween Mystery Mosaics: The Complete Collection</h3></a>
+      <p class="sans">100 mystery pictures, 15 colors. Ages 6 to 12.</p>
+      <a class="peek sans" href="books/halloween-mosaics-complete.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/s?k=Halloween+Mystery+Mosaics+The+Gentle+Bookshop">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-mosaics-vol1.html"><img src="assets/halloween-mosaics-vol1.jpg" alt="Halloween Mystery Mosaics, Volume One cover" loading="lazy" /><h3>Halloween Mystery Mosaics, Volume One</h3></a>
+      <p class="sans">50 mystery pictures, 15 colors. Ages 6 to 12.</p>
+      <a class="peek sans" href="books/halloween-mosaics-vol1.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/s?k=Halloween+Mystery+Mosaics+The+Gentle+Bookshop">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-mosaics-vol2.html"><img src="assets/halloween-mosaics-vol2.jpg" alt="Halloween Mystery Mosaics, Volume Two cover" loading="lazy" /><h3>Halloween Mystery Mosaics, Volume Two</h3></a>
+      <p class="sans">50 new mystery pictures, 15 colors. Ages 6 to 12.</p>
+      <a class="peek sans" href="books/halloween-mosaics-vol2.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/s?k=Halloween+Mystery+Mosaics+The+Gentle+Bookshop">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-seek-and-find.html"><img src="assets/halloween-seek-and-find.jpg" alt="Halloween Seek and Find activity book cover" loading="lazy" /><h3>Halloween Seek &amp; Find</h3></a>
+      <p class="sans">Spooky searching, zero nightmares.</p>
+      <a class="peek sans" href="books/halloween-seek-and-find.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7JDLNMW">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-word-search-easy.html"><img src="assets/halloween-word-search-easy.jpg" alt="Happy Halloween Word Search Easy cover" loading="lazy" /><h3>Halloween Word Search: Easy</h3></a>
+      <p class="sans">80 easy large-print puzzles for adults and seniors. By Nora Pemberton.</p>
+      <a class="peek sans" href="books/halloween-word-search-easy.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HG5NLN8R">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/halloween-word-search-hard.html"><img src="assets/halloween-word-search-hard.jpg" alt="Happy Halloween Word Search Hard cover" loading="lazy" /><h3>Halloween Word Search: Hard</h3></a>
+      <p class="sans">80 harder large-print puzzles for adults and seniors. By Nora Pemberton.</p>
+      <a class="peek sans" href="books/halloween-word-search-hard.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHXQ9NFH">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="new">
+  <div class="kicker sans">Just published</div>
+  <h2>New This Month</h2>
+  <p class="sect-sub sans">Two new books for staying mobile after 60, both large print, both illustrated step by step, both ten minutes a day.</p>
+  <div class="shelf">
+    <div class="book">
+      <span class="badge sans">New</span>
+      <a class="cardlink" href="books/chair-tai-chi.html"><img src="assets/chair-tai-chi.jpg" alt="Chair Tai Chi for Seniors Over 60 cover" loading="lazy" /><h3>Chair Tai Chi for Seniors Over 60</h3></a>
+      <p class="sans">Forty seated moves for two, ten minutes a day, both of you in every picture.</p>
+      <a class="peek sans" href="books/chair-tai-chi.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HKJ1QF7S">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans">New</span>
+      <a class="cardlink" href="books/sciatica-relief.html"><img src="assets/sciatica-relief.jpg" alt="Sciatica Relief for Seniors cover" loading="lazy" /><h3>Sciatica Relief for Seniors</h3></a>
+      <p class="sans">Fifty gentle exercises in large print, with a follow-along video for each.</p>
+      <a class="peek sans" href="books/sciatica-relief.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/s?k=Sciatica+Relief+for+Seniors+The+Gentle+Bookshop">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="learning">
+  <div class="kicker sans">Learn &amp; practise</div>
+  <h2>Handwriting, Learning &amp; Focus</h2>
+  <p class="sect-sub sans">Patient, structured practice books that meet children where they are —
+     built around trace-and-fade methods teachers actually use.</p>
+  <div class="shelf">
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/dysgraphia-kids.html"><img src="assets/dysgraphia-kids.jpg" alt="Dysgraphia Handwriting Workbook for Kids cover" loading="lazy" /><h3>Dysgraphia Workbook: Kids</h3></a>
+      <p class="sans">Trace-and-fade practice that makes handwriting finally click. Ages 6 to 9.</p>
+      <a class="peek sans" href="books/dysgraphia-kids.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7B8ZMBN">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/dysgraphia-teens.html"><img src="assets/dysgraphia-teens.jpg" alt="Dysgraphia Handwriting Workbook for Teens cover" loading="lazy" /><h3>Dysgraphia Workbook: Teens</h3></a>
+      <p class="sans">Handwriting help that doesn&rsquo;t talk down to them. Ages 10-14.</p>
+      <a class="peek sans" href="books/dysgraphia-teens.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7D6LNHF">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/left-handed-tracing.html"><img src="assets/left-handed-tracing.jpg" alt="Left-Handed Letter Tracing for Kids cover" loading="lazy" /><h3>Left-Handed Letter Tracing</h3></a>
+      <p class="sans">Made for lefties from the very first letter. Ages 3-5.</p>
+      <a class="peek sans" href="books/left-handed-tracing.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H65D8H1N">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/pre-writing-skills.html"><img src="assets/pre-writing-skills.jpg" alt="Pre-Writing Skills Workbook for Little Hands cover" loading="lazy" /><h3>Pre-Writing Skills for Little Hands</h3></a>
+      <p class="sans">Shapes, lines and tracing paths before letters. Big guides for the youngest writers.</p>
+      <a class="peek sans" href="books/pre-writing-skills.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGMMBQSD">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/left-handed-handwriting.html"><img src="assets/left-handed-handwriting.jpg" alt="Left-Handed Handwriting Workbook for Kids cover" loading="lazy" /><h3>Left-Handed Handwriting Workbook</h3></a>
+      <p class="sans">Model letters on the RIGHT so a left hand never covers them, plus paper-angle guides.</p>
+      <a class="peek sans" href="books/left-handed-handwriting.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HGNPYQ7P">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/adhd-5-minute-reset.html"><img src="assets/adhd-5-minute-reset.jpg" alt="The 5-Minute Reset undated ADHD planner cover" loading="lazy" /><h3>The 5-Minute Reset</h3></a>
+      <p class="sans">The undated ADHD planner that forgives the days you fall off.</p>
+      <a class="peek sans" href="books/adhd-5-minute-reset.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4VPZDQL">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="curious">
+  <div class="kicker sans">Big questions, real answers</div>
+  <h2>Curious Kids</h2>
+  <p class="sect-sub sans">For the child who asks why a hundred times a day. Every answer checked, every page
+     illustrated, and a quiz to see what stuck.</p>
+  <div class="shelf">
+    <div class="book">
+      <span class="badge sans badge-best">Best seller</span>
+      <a class="cardlink" href="books/big-book-of-why-little-ones.html"><img src="assets/big-book-of-why-little-ones.jpg" alt="The Big Book of Why for Little Ones cover" loading="lazy" /><h3>The Big Book of Why for Little Ones</h3></a>
+      <p class="sans">1,000 questions and answers for two to five year olds, a picture for every one. Book 3 of the series.</p>
+      <a class="peek sans" href="books/big-book-of-why-little-ones.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HKBW1Q8G">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/big-book-of-why-curious-kids.html"><img src="assets/big-book-of-why-curious-kids.jpg" alt="The Big Book of Why for Curious Kids cover" loading="lazy" /><h3>The Big Book of Why for Curious Kids</h3></a>
+      <p class="sans">100 big questions, one full-colour illustrated page each, over 1,000 facts. Ages 6 to 12.</p>
+      <a class="peek sans" href="books/big-book-of-why-curious-kids.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/s?k=Big+Book+of+Why+for+Curious+Kids+The+Gentle+Bookshop">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/big-book-of-what-if.html"><img src="assets/big-book-of-what-if.jpg" alt="The Big Book of What If? for Curious Kids cover" loading="lazy" /><h3>The Big Book of What If? for Curious Kids</h3></a>
+      <p class="sans">100 explorer adventures answered properly, in full colour. Book 2 of the series.</p>
+      <a class="peek sans" href="books/big-book-of-what-if.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HJND6SVK">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      
+      <a class="cardlink" href="books/big-book-of-why.html"><img src="assets/big-book-of-why.jpg" alt="The Curious Kid&amp;rsquo;s Big Book of Why cover" loading="lazy" /><h3>The Curious Kid&amp;rsquo;s Big Book of Why</h3></a>
+      <p class="sans">300 questions, 310 drawings, every answer checked twice. Ages 6 to 12. Also on Kindle.</p>
+      <a class="peek sans" href="books/big-book-of-why.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HJDYLGG1">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      
+      <a class="cardlink" href="books/gross-book-of-why.html"><img src="assets/gross-book-of-why.jpg" alt="The Curious Kid&amp;rsquo;s Gross Book of Why cover" loading="lazy" /><h3>The Curious Kid&amp;rsquo;s Gross Book of Why</h3></a>
+      <p class="sans">150 revolting questions with real answers. For kids who ask why. Also on Kindle.</p>
+      <a class="peek sans" href="books/gross-book-of-why.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHZTLVH3">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="seniors">
+  <div class="kicker sans">For golden years</div>
+  <h2>Care &amp; Comfort for Seniors</h2>
+  <p class="sect-sub sans">Practical help for caregivers, and gentle activities designed
+     especially for older adults and people living with dementia.</p>
+  <div class="shelf">
+    <div class="book">
+      <span class="badge sans">New</span>
+      <a class="cardlink" href="books/chair-tai-chi.html"><img src="assets/chair-tai-chi.jpg" alt="Chair Tai Chi for Seniors Over 60 cover" loading="lazy" /><h3>Chair Tai Chi for Seniors Over 60</h3></a>
+      <p class="sans">Forty seated moves for two, ten minutes a day, both of you in every picture.</p>
+      <a class="peek sans" href="books/chair-tai-chi.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HKJ1QF7S">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <span class="badge sans">New</span>
+      <a class="cardlink" href="books/sciatica-relief.html"><img src="assets/sciatica-relief.jpg" alt="Sciatica Relief for Seniors cover" loading="lazy" /><h3>Sciatica Relief for Seniors</h3></a>
+      <p class="sans">Fifty gentle exercises in large print, with a follow-along video for each.</p>
+      <a class="peek sans" href="books/sciatica-relief.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/s?k=Sciatica+Relief+for+Seniors+The+Gentle+Bookshop">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/dementia.html"><img src="assets/dementia.jpg" alt="The First 90 Days of Dementia Care book cover" loading="lazy" /><h3>The First 90 Days of Dementia Care</h3></a>
+      <p class="sans">The calm, practical manual nobody hands you — what to do first, what to say,
+         and how to look after yourself too. By Claire Bennett.</p>
+      <a class="peek sans" href="books/dementia.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H49JJR3T">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/puzzles.html"><img src="assets/puzzles.jpg" alt="Gentle Puzzles for Seniors book cover" loading="lazy" /><h3>Gentle Puzzles for Seniors</h3></a>
+      <p class="sans">90 easy large-print puzzles that feel like a cup of tea, not a test.
+         Designed for older adults and people living with dementia. By Claire Bennett.</p>
+      <a class="peek sans" href="books/puzzles.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4RZPM7P">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/memory-activity.html"><img src="assets/memory-activity.jpg" alt="Memory Lane Activity Book book cover" loading="lazy" /><h3>Memory Lane Activity Book</h3></a>
+      <p class="sans">140 gentle puzzles in large print, and the kind changes on every single page.
+         No timer, no score, and the answers are at the back.</p>
+      <a class="peek sans" href="books/memory-activity.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HJW8SJX1">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="grayscale">
+  <div class="kicker sans">For grown-up colourists</div>
+  <h2>Detailed Grayscale Colouring</h2>
+  <p class="sect-sub sans">Realistic grayscale shading you layer over with coloured pencils for rich, lifelike
+     results. Intricate designs and ornate borders — premium pages for adults who love to colour.</p>
+  <div class="shelf">
+    <div class="book">
+      <a class="cardlink" href="books/mythic-kingdoms.html"><img src="assets/mythic-kingdoms.jpg" alt="Mythic Kingdoms grayscale fantasy coloring book cover" loading="lazy" /><h3>Mythic Kingdoms</h3></a>
+      <p class="sans">50 grayscale fantasy designs — dragons, fairies and mermaids — for coloured pencils and calm.</p>
+      <a class="peek sans" href="books/mythic-kingdoms.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H5JDBBHD">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/into-the-wild.html"><img src="assets/into-the-wild.jpg" alt="Into the Wild grayscale animal coloring book cover" loading="lazy" /><h3>Into the Wild</h3></a>
+      <p class="sans">50 detailed grayscale animals in lush botanical scenes — layer your colour for gallery-worthy results.</p>
+      <a class="peek sans" href="books/into-the-wild.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H5FKHMLF">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/christmas-grayscale-vol1.html"><img src="assets/christmas-grayscale-vol1.jpg" alt="Christmas Grayscale Coloring Book Volume One cover" loading="lazy" /><h3>Christmas Grayscale: Vol. 1</h3></a>
+      <p class="sans">50 detailed robins, reindeer, snowy villages and winter botanicals.</p>
+      <a class="peek sans" href="books/christmas-grayscale-vol1.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHSG215H">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/christmas-grayscale-vol2.html"><img src="assets/christmas-grayscale-vol2.jpg" alt="Christmas Grayscale Coloring Book Volume Two cover" loading="lazy" /><h3>Christmas Grayscale: Vol. 2</h3></a>
+      <p class="sans">50 detailed Santas, reindeer, snowy cottages and winter animals.</p>
+      <a class="peek sans" href="books/christmas-grayscale-vol2.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHSG2M4Q">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/christmas-grayscale-complete.html"><img src="assets/christmas-grayscale-complete.jpg" alt="Christmas Grayscale Complete Collection cover" loading="lazy" /><h3>Christmas Grayscale: Complete Collection</h3></a>
+      <p class="sans">All 100 festive designs from Volumes One and Two in one book.</p>
+      <a class="peek sans" href="books/christmas-grayscale-complete.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHBZK7S1">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="seekfind">
+  <div class="kicker sans">Look closer</div>
+  <h2>Seek &amp; Find Activity Books</h2>
+  <p class="sect-sub sans">Hidden-picture puzzles that buy you a quiet half hour — search, count,
+     circle and colour, for ages 4-8.</p>
+  <div class="shelf">
+    <div class="book">
+      <a class="cardlink" href="books/christmas-seek-and-find.html"><img src="assets/christmas-seek-and-find.jpg" alt="Christmas Seek and Find activity book cover" loading="lazy" /><h3>Christmas Seek &amp; Find</h3></a>
+      <p class="sans">Hidden pictures for the longest wait of the year.</p>
+      <a class="peek sans" href="books/christmas-seek-and-find.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7MK2MWQ">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/summer-seek-and-find.html"><img src="assets/summer-seek-and-find.jpg" alt="Summer Seek and Find activity book cover" loading="lazy" /><h3>Summer Seek &amp; Find</h3></a>
+      <p class="sans">Backseat boredom, solved.</p>
+      <a class="peek sans" href="books/summer-seek-and-find.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H7J76MVV">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="puzzles-games">
+  <div class="kicker sans">Something to solve</div>
+  <h2>Puzzles &amp; Brain Games</h2>
+  <p class="sect-sub sans">Word searches and colour-by-number grids in comfortable large print.
+     Sit down with a cup of tea and lose half an hour.</p>
+  <div class="shelf">
+    <div class="book">
+      <a class="cardlink" href="books/dogs-mystery-mosaics.html"><img src="assets/dogs-mystery-mosaics.jpg" alt="100 Dogs Monochrome Mystery Mosaics cover" loading="lazy" /><h3>100 Dogs Mystery Mosaics</h3></a>
+      <p class="sans">One-pen colour-by-number. 100 hidden dog pictures reveal themselves square by square.</p>
+      <a class="peek sans" href="books/dogs-mystery-mosaics.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HH7G1D5P">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="gifts">
+  <div class="kicker sans">Something to unwrap</div>
+  <h2>Birthday &amp; Gift Books</h2>
+  <p class="sect-sub sans">Nostalgia, trivia and grin-inducing facts. The kind of book you give
+     because you know exactly who will love it.</p>
+  <div class="shelf">
+    <div class="book">
+      <a class="cardlink" href="books/born-1951.html"><img src="assets/born-1951.jpg" alt="101 Things People Born in 1951 Will Never Forget cover" loading="lazy" /><h3>Born in 1951: 101 Things You Will Never Forget</h3></a>
+      <p class="sans">The 75th birthday gift. What happened in 1951, trivia quizzes and word searches. Large print.</p>
+      <a class="peek sans" href="books/born-1951.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HJ2PXK3N">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/born-1956.html"><img src="assets/born-1956.jpg" alt="101 Things People Born in 1956 Will Never Forget cover" loading="lazy" /><h3>Born in 1956: 101 Things You Will Never Forget</h3></a>
+      <p class="sans">The 70th birthday gift. What happened in 1956, trivia quizzes and word searches. Large print.</p>
+      <a class="peek sans" href="books/born-1956.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HJC5LFYL">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/born-1960.html"><img src="assets/born-1960.jpg" alt="101 Things People Born in 1960 Will Never Forget cover" loading="lazy" /><h3>Born in 1960: 101 Things You Will Never Forget</h3></a>
+      <p class="sans">The 66th birthday gift. What happened in 1960, trivia quizzes and word searches. Large print.</p>
+      <a class="peek sans" href="books/born-1960.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHY8LZFG">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/born-1966.html"><img src="assets/born-1966.jpg" alt="101 Things People Born in 1966 Will Never Forget cover" loading="lazy" /><h3>Born in 1966: 101 Things You Will Never Forget</h3></a>
+      <p class="sans">The 60th birthday gift. What happened in 1966, trivia quizzes and word searches. Large print.</p>
+      <a class="peek sans" href="books/born-1966.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHTBDD9Q">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
+
+<section id="stories">
+  <div class="kicker sans">For little ones</div>
+  <h2>Illustrated Story Books</h2>
+  <p class="sect-sub sans">Gentle, true-to-nature tales painted like the classics — for bedtime,
+     story time, and children who love the natural world.</p>
+  <div class="shelf">
+    <div class="book">
+      <a class="cardlink" href="books/jackdaw.html"><img src="assets/jackdaw.jpg" alt="The Jackdaw with a Broken Wing book cover" loading="lazy" /><h3>The Jackdaw with a Broken Wing</h3></a>
+      <p class="sans">A young jackdaw learns to fly again — a story about kindness, beautifully illustrated.</p>
+      <a class="peek sans" href="books/jackdaw.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4M75C14">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/lonely-badger.html"><img src="assets/badger.jpg" alt="The Lonely Badger book cover" loading="lazy" /><h3>The Lonely Badger</h3></a>
+      <p class="sans">A gentle woodland tale about friendship, for quiet kids with big hearts.</p>
+      <a class="peek sans" href="books/lonely-badger.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4MF22M4">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/little-star.html"><img src="assets/little-star.jpg" alt="The Little Star Who Couldn't Sleep book cover" loading="lazy" /><h3>The Little Star Who Couldn&rsquo;t Sleep</h3></a>
+      <p class="sans">For small people who fight sleep like heroes.</p>
+      <a class="peek sans" href="books/little-star.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H5SPVM93">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/goodnight-capybara.html"><img src="assets/goodnight-capybara.jpg" alt="Goodnight Little Capybara book cover" loading="lazy" /><h3>Goodnight, Little Capybara</h3></a>
+      <p class="sans">The calmest animal on earth, at bedtime.</p>
+      <a class="peek sans" href="books/goodnight-capybara.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H5711HFP">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/mole-worms.html"><img src="assets/mole-worms.jpg" alt="The Mole Who Wouldn't Eat Worms book cover" loading="lazy" /><h3>The Mole Who Wouldn&rsquo;t Eat Worms</h3></a>
+      <p class="sans">A fussy eater finds his feast — a David Binelli nature tale.</p>
+      <a class="peek sans" href="books/mole-worms.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4ZTMHYN">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/barnaby-hospital.html"><img src="assets/barnaby-hospital.jpg" alt="Barnaby Goes to Hospital book cover" loading="lazy" /><h3>Barnaby Goes to Hospital</h3></a>
+      <p class="sans">Barnaby the Big Blue Bus makes the scary trip friendly.</p>
+      <a class="peek sans" href="books/barnaby-hospital.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0H4KYSVCJ">Get it on Amazon</a>
+    </div>
+    <div class="book">
+      <a class="cardlink" href="books/alien-in-my-shed.html"><img src="assets/alien-in-my-shed.jpg" alt="The Alien I Found in My Shed bedtime stories cover" loading="lazy" /><h3>The Alien I Found in My Shed</h3></a>
+      <p class="sans">Three gentle alien bedtime stories for ages 3-7. Also on Kindle.</p>
+      <a class="peek sans" href="books/alien-in-my-shed.html">Look inside</a>
+      <a class="buy sans" href="https://www.amazon.com/dp/B0HHHSQNTF">Get it on Amazon</a>
+    </div>
+  </div>
+</section>
 
 <section id="coloring">
   <div class="kicker sans">Relax & unwind</div>
@@ -140,14 +598,12 @@
       <a class="buy sans" href="https://www.amazon.com/dp/B0H4R6WCTP">Get it on Amazon</a>
     </div>
     <div class="book">
-      <span class="badge sans">New release</span>
       <a class="cardlink" href="books/animal-football.html"><img src="assets/animal-football.jpg" alt="Animal Football All-Stars bold and easy coloring book cover" loading="lazy" /><h3>Animal Football All-Stars</h3></a>
       <p class="sans">Footie-mad animals in big, bold lines — soccer fun for kids ages 3–8.</p>
       <a class="peek sans" href="books/animal-football.html">Look inside</a>
       <a class="buy sans" href="https://www.amazon.com/dp/B0H4VJ8SL4">Get it on Amazon</a>
     </div>
-      <div class="book">
-      <span class="badge sans">New release</span>
+    <div class="book">
       <a class="cardlink" href="books/axolotls-bold-easy.html"><img src="assets/axolotls-bold-easy.jpg" alt="Adorable Axolotls Bold and Easy Coloring Book cover" loading="lazy" /><h3>Adorable Axolotls</h3></a>
       <p class="sans">Fifty more smiling axolotls — zero difficult bits.</p>
       <a class="peek sans" href="books/axolotls-bold-easy.html">Look inside</a>
@@ -159,383 +615,8 @@
       <a class="peek sans" href="books/sea-otter.html">Look inside</a>
       <a class="buy sans" href="https://www.amazon.com/dp/B0H4ZRFMYK">Get it on Amazon</a>
     </div>
-</div>
-</section>
-
-<section id="grayscale">
-  <div class="kicker sans">For grown-up colourists</div>
-  <h2>Detailed Grayscale Colouring</h2>
-  <p class="sect-sub sans">Realistic grayscale shading you layer over with coloured pencils for rich, lifelike
-     results. Intricate designs and ornate borders — premium pages for adults who love to colour.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/mythic-kingdoms.html"><img src="assets/mythic-kingdoms.jpg" alt="Mythic Kingdoms grayscale fantasy coloring book cover" loading="lazy" /><h3>Mythic Kingdoms</h3></a>
-      <p class="sans">50 grayscale fantasy designs — dragons, fairies and mermaids — for coloured pencils and calm.</p>
-      <a class="peek sans" href="books/mythic-kingdoms.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H5JDBBHD">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/into-the-wild.html"><img src="assets/into-the-wild.jpg" alt="Into the Wild grayscale animal coloring book cover" loading="lazy" /><h3>Into the Wild</h3></a>
-      <p class="sans">50 detailed grayscale animals in lush botanical scenes — layer your colour for gallery-worthy results.</p>
-      <a class="peek sans" href="books/into-the-wild.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H5FKHMLF">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-grayscale-vol1.html"><img src="assets/halloween-grayscale-vol1.jpg" alt="Halloween Grayscale Coloring Book Volume One cover" loading="lazy" /><h3>Halloween Grayscale: Vol. 1</h3></a>
-      <p class="sans">50 detailed owls, pumpkins, haunted houses and botanical studies for colored pencils.</p>
-      <a class="peek sans" href="books/halloween-grayscale-vol1.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HGVBNKZS">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-grayscale-vol2.html"><img src="assets/halloween-grayscale-vol2.jpg" alt="Halloween Grayscale Coloring Book Volume Two cover" loading="lazy" /><h3>Halloween Grayscale: Vol. 2</h3></a>
-      <p class="sans">50 Victorian Gothic scenes of skeletons, ghosts, witches and haunted houses.</p>
-      <a class="peek sans" href="books/halloween-grayscale-vol2.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HGVLK1VQ">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-grayscale-complete.html"><img src="assets/halloween-grayscale-complete.jpg" alt="Halloween Grayscale Complete Collection cover" loading="lazy" /><h3>Halloween Grayscale: Complete Collection</h3></a>
-      <p class="sans">All 100 designs from Volumes One and Two in a single book.</p>
-      <a class="peek sans" href="books/halloween-grayscale-complete.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HGVDWKP4">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/christmas-grayscale-vol1.html"><img src="assets/christmas-grayscale-vol1.jpg" alt="Christmas Grayscale Coloring Book Volume One cover" loading="lazy" /><h3>Christmas Grayscale: Vol. 1</h3></a>
-      <p class="sans">50 detailed robins, reindeer, snowy villages and winter botanicals.</p>
-      <a class="peek sans" href="books/christmas-grayscale-vol1.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHSG215H">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/christmas-grayscale-vol2.html"><img src="assets/christmas-grayscale-vol2.jpg" alt="Christmas Grayscale Coloring Book Volume Two cover" loading="lazy" /><h3>Christmas Grayscale: Vol. 2</h3></a>
-      <p class="sans">50 detailed Santas, reindeer, snowy cottages and winter animals.</p>
-      <a class="peek sans" href="books/christmas-grayscale-vol2.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHSG2M4Q">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/christmas-grayscale-complete.html"><img src="assets/christmas-grayscale-complete.jpg" alt="Christmas Grayscale Complete Collection cover" loading="lazy" /><h3>Christmas Grayscale: Complete Collection</h3></a>
-      <p class="sans">All 100 festive designs from Volumes One and Two in one book.</p>
-      <a class="peek sans" href="books/christmas-grayscale-complete.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHBZK7S1">Get it on Amazon</a>
-    </div>
   </div>
 </section>
-
-<section id="stories">
-  <div class="kicker sans">For little ones</div>
-  <h2>Illustrated Story Books</h2>
-  <p class="sect-sub sans">Gentle, true-to-nature tales painted like the classics — for bedtime,
-     story time, and children who love the natural world.</p>
-  <div class="shelf">
-    <div class="book">
-      <a class="cardlink" href="books/jackdaw.html"><img src="assets/jackdaw.jpg" alt="The Jackdaw with a Broken Wing book cover" loading="lazy" /><h3>The Jackdaw with a Broken Wing</h3></a>
-      <p class="sans">A young jackdaw learns to fly again — a story about kindness, beautifully illustrated.</p>
-      <a class="peek sans" href="books/jackdaw.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4M75C14">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <a class="cardlink" href="books/lonely-badger.html"><img src="assets/badger.jpg" alt="The Lonely Badger book cover" loading="lazy" /><h3>The Lonely Badger</h3></a>
-      <p class="sans">A gentle woodland tale about friendship, for quiet kids with big hearts.</p>
-      <a class="peek sans" href="books/lonely-badger.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4MF22M4">Get it on Amazon</a>
-    </div>
-      <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/little-star.html"><img src="assets/little-star.jpg" alt="The Little Star Who Couldn't Sleep book cover" loading="lazy" /><h3>The Little Star Who Couldn&rsquo;t Sleep</h3></a>
-      <p class="sans">For small people who fight sleep like heroes.</p>
-      <a class="peek sans" href="books/little-star.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H5SPVM93">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/goodnight-capybara.html"><img src="assets/goodnight-capybara.jpg" alt="Goodnight Little Capybara book cover" loading="lazy" /><h3>Goodnight, Little Capybara</h3></a>
-      <p class="sans">The calmest animal on earth, at bedtime.</p>
-      <a class="peek sans" href="books/goodnight-capybara.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H5711HFP">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <a class="cardlink" href="books/mole-worms.html"><img src="assets/mole-worms.jpg" alt="The Mole Who Wouldn't Eat Worms book cover" loading="lazy" /><h3>The Mole Who Wouldn&rsquo;t Eat Worms</h3></a>
-      <p class="sans">A fussy eater finds his feast — a David Binelli nature tale.</p>
-      <a class="peek sans" href="books/mole-worms.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4ZTMHYN">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <a class="cardlink" href="books/barnaby-hospital.html"><img src="assets/barnaby-hospital.jpg" alt="Barnaby Goes to Hospital book cover" loading="lazy" /><h3>Barnaby Goes to Hospital</h3></a>
-      <p class="sans">Barnaby the Big Blue Bus makes the scary trip friendly.</p>
-      <a class="peek sans" href="books/barnaby-hospital.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4KYSVCJ">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/alien-in-my-shed.html"><img src="assets/alien-in-my-shed.jpg" alt="The Alien I Found in My Shed bedtime stories cover" loading="lazy" /><h3>The Alien I Found in My Shed</h3></a>
-      <p class="sans">Three gentle alien bedtime stories for ages 3-7. Also on Kindle.</p>
-      <a class="peek sans" href="books/alien-in-my-shed.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHHSQNTF">Get it on Amazon</a>
-    </div>
-</div>
-</section>
-
-
-<section id="learning">
-  <div class="kicker sans">Learn &amp; practise</div>
-  <h2>Handwriting, Learning &amp; Focus</h2>
-  <p class="sect-sub sans">Patient, structured practice books that meet children where they are —
-     built around trace-and-fade methods teachers actually use.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/dysgraphia-kids.html"><img src="assets/dysgraphia-kids.jpg" alt="Dysgraphia Handwriting Workbook for Kids cover" loading="lazy" /><h3>Dysgraphia Workbook: Kids</h3></a>
-      <p class="sans">Trace-and-fade practice that makes handwriting finally click. Ages 6 to 9.</p>
-      <a class="peek sans" href="books/dysgraphia-kids.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H7B8ZMBN">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/dysgraphia-teens.html"><img src="assets/dysgraphia-teens.jpg" alt="Dysgraphia Handwriting Workbook for Teens cover" loading="lazy" /><h3>Dysgraphia Workbook: Teens</h3></a>
-      <p class="sans">Handwriting help that doesn&rsquo;t talk down to them. Ages 10-14.</p>
-      <a class="peek sans" href="books/dysgraphia-teens.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H7D6LNHF">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <a class="cardlink" href="books/left-handed-tracing.html"><img src="assets/left-handed-tracing.jpg" alt="Left-Handed Letter Tracing for Kids cover" loading="lazy" /><h3>Left-Handed Letter Tracing</h3></a>
-      <p class="sans">Made for lefties from the very first letter. Ages 3-5.</p>
-      <a class="peek sans" href="books/left-handed-tracing.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H65D8H1N">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/pre-writing-skills.html"><img src="assets/pre-writing-skills.jpg" alt="Pre-Writing Skills Workbook for Little Hands cover" loading="lazy" /><h3>Pre-Writing Skills for Little Hands</h3></a>
-      <p class="sans">Shapes, lines and tracing paths before letters. Big guides for the youngest writers.</p>
-      <a class="peek sans" href="books/pre-writing-skills.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HGMMBQSD">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/left-handed-handwriting.html"><img src="assets/left-handed-handwriting.jpg" alt="Left-Handed Handwriting Workbook for Kids cover" loading="lazy" /><h3>Left-Handed Handwriting Workbook</h3></a>
-      <p class="sans">Model letters on the RIGHT so a left hand never covers them, plus paper-angle guides.</p>
-      <a class="peek sans" href="books/left-handed-handwriting.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HGNPYQ7P">Get it on Amazon</a>
-    </div>
-  
-      <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/adhd-5-minute-reset.html"><img src="assets/adhd-5-minute-reset.jpg" alt="The 5-Minute Reset undated ADHD planner cover" loading="lazy" /><h3>The 5-Minute Reset</h3></a>
-      <p class="sans">The undated ADHD planner that forgives the days you fall off.</p>
-      <a class="peek sans" href="books/adhd-5-minute-reset.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4VPZDQL">Get it on Amazon</a>
-    </div>
-  </div>
-</section>
-
-<section id="seekfind">
-  <div class="kicker sans">Look closer</div>
-  <h2>Seek &amp; Find Activity Books</h2>
-  <p class="sect-sub sans">Hidden-picture puzzles that buy you a quiet half hour — search, count,
-     circle and colour, for ages 4-8.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/christmas-seek-and-find.html"><img src="assets/christmas-seek-and-find.jpg" alt="Christmas Seek and Find activity book cover" loading="lazy" /><h3>Christmas Seek &amp; Find</h3></a>
-      <p class="sans">Hidden pictures for the longest wait of the year.</p>
-      <a class="peek sans" href="books/christmas-seek-and-find.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H7MK2MWQ">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/summer-seek-and-find.html"><img src="assets/summer-seek-and-find.jpg" alt="Summer Seek and Find activity book cover" loading="lazy" /><h3>Summer Seek &amp; Find</h3></a>
-      <p class="sans">Backseat boredom, solved.</p>
-      <a class="peek sans" href="books/summer-seek-and-find.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H7J76MVV">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-seek-and-find.html"><img src="assets/halloween-seek-and-find.jpg" alt="Halloween Seek and Find activity book cover" loading="lazy" /><h3>Halloween Seek &amp; Find</h3></a>
-      <p class="sans">Spooky searching, zero nightmares.</p>
-      <a class="peek sans" href="books/halloween-seek-and-find.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H7JDLNMW">Get it on Amazon</a>
-    </div>
-  </div>
-</section>
-
-<section id="puzzles-games">
-  <div class="kicker sans">Something to solve</div>
-  <h2>Puzzles &amp; Brain Games</h2>
-  <p class="sect-sub sans">Word searches and colour-by-number grids in comfortable large print.
-     Sit down with a cup of tea and lose half an hour.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-word-search-easy.html"><img src="assets/halloween-word-search-easy.jpg" alt="Happy Halloween Word Search Easy cover" loading="lazy" /><h3>Halloween Word Search: Easy</h3></a>
-      <p class="sans">80 easy large-print puzzles for adults and seniors. By Nora Pemberton.</p>
-      <a class="peek sans" href="books/halloween-word-search-easy.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HG5NLN8R">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-word-search-hard.html"><img src="assets/halloween-word-search-hard.jpg" alt="Happy Halloween Word Search Hard cover" loading="lazy" /><h3>Halloween Word Search: Hard</h3></a>
-      <p class="sans">80 harder large-print puzzles for adults and seniors. By Nora Pemberton.</p>
-      <a class="peek sans" href="books/halloween-word-search-hard.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHXQ9NFH">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/dogs-mystery-mosaics.html"><img src="assets/dogs-mystery-mosaics.jpg" alt="100 Dogs Monochrome Mystery Mosaics cover" loading="lazy" /><h3>100 Dogs Mystery Mosaics</h3></a>
-      <p class="sans">One-pen colour-by-number. 100 hidden dog pictures reveal themselves square by square.</p>
-      <a class="peek sans" href="books/dogs-mystery-mosaics.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HH7G1D5P">Get it on Amazon</a>
-    </div>
-  </div>
-</section>
-
-<section id="seniors">
-  <div class="kicker sans">For golden years</div>
-  <h2>Care &amp; Comfort for Seniors</h2>
-  <p class="sect-sub sans">Practical help for caregivers, and gentle activities designed
-     especially for older adults and people living with dementia.</p>
-  <div class="shelf">
-    <div class="book">
-      <a class="cardlink" href="books/dementia.html"><img src="assets/dementia.jpg" alt="The First 90 Days of Dementia Care book cover" loading="lazy" /><h3>The First 90 Days of Dementia Care</h3></a>
-      <p class="sans">The calm, practical manual nobody hands you — what to do first, what to say,
-         and how to look after yourself too. By Claire Bennett.</p>
-      <a class="peek sans" href="books/dementia.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H49JJR3T">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/puzzles.html"><img src="assets/puzzles.jpg" alt="Gentle Puzzles for Seniors book cover" loading="lazy" /><h3>Gentle Puzzles for Seniors</h3></a>
-      <p class="sans">90 easy large-print puzzles that feel like a cup of tea, not a test.
-         Designed for older adults and people living with dementia. By Claire Bennett.</p>
-      <a class="peek sans" href="books/puzzles.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0H4RZPM7P">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/memory-activity.html"><img src="assets/memory-activity.jpg" alt="Memory Lane Activity Book book cover" loading="lazy" /><h3>Memory Lane Activity Book</h3></a>
-      <p class="sans">140 gentle puzzles in large print, and the kind changes on every single page.
-         No timer, no score, and the answers are at the back.</p>
-      <a class="peek sans" href="books/memory-activity.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HJW8SJX1">Get it on Amazon</a>
-    </div>
-</div>
-</section>
-
-<section id="mosaics">
-  <div class="kicker sans">Color by number, picture hidden</div>
-  <h2>Halloween Mystery Mosaics</h2>
-  <p class="sect-sub sans">A wall of numbered circles on a black page. Color them in and a pumpkin, a ghost or a
-     haunted house appears. No outline, no clue. Ages 6 to 12.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-mosaics-vol1.html"><img src="assets/halloween-mosaics-vol1.jpg" alt="Halloween Mystery Mosaics, Volume One cover" loading="lazy" /><h3>Halloween Mystery Mosaics, Volume One</h3></a>
-      <p class="sans">50 mystery pictures, 15 colors. Ages 6 to 12.</p>
-      <a class="peek sans" href="books/halloween-mosaics-vol1.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/s?k=Halloween+Mystery+Mosaics+The+Gentle+Bookshop">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-mosaics-vol2.html"><img src="assets/halloween-mosaics-vol2.jpg" alt="Halloween Mystery Mosaics, Volume Two cover" loading="lazy" /><h3>Halloween Mystery Mosaics, Volume Two</h3></a>
-      <p class="sans">50 new mystery pictures, 15 colors. Ages 6 to 12.</p>
-      <a class="peek sans" href="books/halloween-mosaics-vol2.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/s?k=Halloween+Mystery+Mosaics+The+Gentle+Bookshop">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/halloween-mosaics-complete.html"><img src="assets/halloween-mosaics-complete.jpg" alt="Halloween Mystery Mosaics: The Complete Collection cover" loading="lazy" /><h3>Halloween Mystery Mosaics: The Complete Collection</h3></a>
-      <p class="sans">100 mystery pictures, 15 colors. Ages 6 to 12.</p>
-      <a class="peek sans" href="books/halloween-mosaics-complete.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/s?k=Halloween+Mystery+Mosaics+The+Gentle+Bookshop">Get it on Amazon</a>
-    </div>
-  </div>
-</section>
-
-<section id="curious">
-  <div class="kicker sans">Big questions, real answers</div>
-  <h2>Curious Kids</h2>
-  <p class="sect-sub sans">For the child who asks why a hundred times a day. Every answer checked, every page
-     illustrated, and a quiz to see what stuck.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/big-book-of-why-little-ones.html"><img src="assets/big-book-of-why-little-ones.jpg" alt="The Big Book of Why for Little Ones cover" loading="lazy" /><h3>The Big Book of Why for Little Ones</h3></a>
-      <p class="sans">1,000 questions and answers for two to five year olds, a picture for every one. Book 3 of the series.</p>
-      <a class="peek sans" href="books/big-book-of-why-little-ones.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HKBW1Q8G">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/big-book-of-why-curious-kids.html"><img src="assets/big-book-of-why-curious-kids.jpg" alt="The Big Book of Why for Curious Kids cover" loading="lazy" /><h3>The Big Book of Why for Curious Kids</h3></a>
-      <p class="sans">100 big questions, one full-colour illustrated page each, over 1,000 facts. Ages 6 to 12.</p>
-      <a class="peek sans" href="books/big-book-of-why-curious-kids.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/s?k=Big+Book+of+Why+for+Curious+Kids+The+Gentle+Bookshop">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/big-book-of-what-if.html"><img src="assets/big-book-of-what-if.jpg" alt="The Big Book of What If? for Curious Kids cover" loading="lazy" /><h3>The Big Book of What If? for Curious Kids</h3></a>
-      <p class="sans">100 explorer adventures answered properly, in full colour. Book 2 of the series.</p>
-      <a class="peek sans" href="books/big-book-of-what-if.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HJND6SVK">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      
-      <a class="cardlink" href="books/big-book-of-why.html"><img src="assets/big-book-of-why.jpg" alt="The Curious Kid&amp;rsquo;s Big Book of Why cover" loading="lazy" /><h3>The Curious Kid&amp;rsquo;s Big Book of Why</h3></a>
-      <p class="sans">300 questions, 310 drawings, every answer checked twice. Ages 6 to 12. Also on Kindle.</p>
-      <a class="peek sans" href="books/big-book-of-why.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HJDYLGG1">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      
-      <a class="cardlink" href="books/gross-book-of-why.html"><img src="assets/gross-book-of-why.jpg" alt="The Curious Kid&amp;rsquo;s Gross Book of Why cover" loading="lazy" /><h3>The Curious Kid&amp;rsquo;s Gross Book of Why</h3></a>
-      <p class="sans">150 revolting questions with real answers. For kids who ask why. Also on Kindle.</p>
-      <a class="peek sans" href="books/gross-book-of-why.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHZTLVH3">Get it on Amazon</a>
-    </div>
-  </div>
-</section>
-
-<section id="gifts">
-  <div class="kicker sans">Something to unwrap</div>
-  <h2>Birthday &amp; Gift Books</h2>
-  <p class="sect-sub sans">Nostalgia, trivia and grin-inducing facts. The kind of book you give
-     because you know exactly who will love it.</p>
-  <div class="shelf">
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/born-1951.html"><img src="assets/born-1951.jpg" alt="101 Things People Born in 1951 Will Never Forget cover" loading="lazy" /><h3>Born in 1951: 101 Things You Will Never Forget</h3></a>
-      <p class="sans">The 75th birthday gift. What happened in 1951, trivia quizzes and word searches. Large print.</p>
-      <a class="peek sans" href="books/born-1951.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HJ2PXK3N">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/born-1956.html"><img src="assets/born-1956.jpg" alt="101 Things People Born in 1956 Will Never Forget cover" loading="lazy" /><h3>Born in 1956: 101 Things You Will Never Forget</h3></a>
-      <p class="sans">The 70th birthday gift. What happened in 1956, trivia quizzes and word searches. Large print.</p>
-      <a class="peek sans" href="books/born-1956.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HJC5LFYL">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/born-1960.html"><img src="assets/born-1960.jpg" alt="101 Things People Born in 1960 Will Never Forget cover" loading="lazy" /><h3>Born in 1960: 101 Things You Will Never Forget</h3></a>
-      <p class="sans">The 66th birthday gift. What happened in 1960, trivia quizzes and word searches. Large print.</p>
-      <a class="peek sans" href="books/born-1960.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHY8LZFG">Get it on Amazon</a>
-    </div>
-    <div class="book">
-      <span class="badge sans">New release</span>
-      <a class="cardlink" href="books/born-1966.html"><img src="assets/born-1966.jpg" alt="101 Things People Born in 1966 Will Never Forget cover" loading="lazy" /><h3>Born in 1966: 101 Things You Will Never Forget</h3></a>
-      <p class="sans">The 60th birthday gift. What happened in 1966, trivia quizzes and word searches. Large print.</p>
-      <a class="peek sans" href="books/born-1966.html">Look inside</a>
-      <a class="buy sans" href="https://www.amazon.com/dp/B0HHTBDD9Q">Get it on Amazon</a>
-    </div>
-  </div>
-</section>
-
 <div class="promise sans">
   <div class="promise-inner">
     <div><h3>Big, friendly pages</h3><p>Large print, thick lines and breathing room on every page. Nothing fiddly, nothing cramped.</p></div>
