@@ -278,7 +278,7 @@ h1 em{font-style:normal;color:var(--orange)}
 <body>
 
 <nav class="nav" aria-label="Main">
-  <a class="brand" href="#top"><img src="assets/logo.png" alt=""><span>The Gentle Bookshop</span></a>
+  <a class="brand" href="#top"><img src="../assets/logo.png" alt=""><span>The Gentle Bookshop</span></a>
   <div class="links">
     <a href="#little">Little ones</a><a href="#curious">Curious kids</a><a href="#learning">Handwriting</a><a href="#golden">Golden years</a><a href="#season">Halloween</a>
   </div>
@@ -437,7 +437,7 @@ h1 em{font-style:normal;color:var(--orange)}
       <svg viewBox="0 0 120 140" class="tea"><g id="steam" stroke="#fffdf8" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"><path d="M40 40 Q30 25 40 10"/><path d="M60 40 Q50 25 60 10"/><path d="M80 40 Q70 25 80 10"/></g><path d="M20 50 H100 V110 Q100 130 60 130 Q20 130 20 110Z" fill="#f08c34"/><path d="M100 64 Q122 64 122 84 Q122 102 100 102" stroke="#f08c34" stroke-width="10" fill="none"/></svg>
     </div>
     <div class="brushpage" id="brushpage">
-      <img src="assets/samples/into-the-wild/3.jpg" alt="Grayscale colouring page from Into the Wild">
+      <img src="../assets/samples/into-the-wild/3.jpg" alt="Grayscale colouring page from Into the Wild">
       <div class="tint" aria-hidden="true"></div>
       <span class="tip">Hover to add a little colour</span>
     </div>
@@ -471,7 +471,7 @@ h1 em{font-style:normal;color:var(--orange)}
       <div class="dialrow">
         <div class="dialface"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="92" fill="#fffdf8" stroke="#105c64" stroke-width="8"/><g id="needle"><path d="M100 100 L100 24" stroke="#f08c34" stroke-width="8" stroke-linecap="round"/></g><circle cx="100" cy="100" r="12" fill="#105c64"/></svg>
           <div class="years" id="years"></div></div>
-        <a class="bornbook" id="bornbook" href="https://www.amazon.com/dp/B0HJ2PXK3N" target="_blank" rel="noopener"><img id="bornimg" src="assets/born-1951.jpg" alt="Born in 1951 book cover"><span id="borntxt">Born in 1951: 101 Things You Will Never Forget</span></a>
+        <a class="bornbook" id="bornbook" href="https://www.amazon.com/dp/B0HJ2PXK3N" target="_blank" rel="noopener"><img id="bornimg" src="../assets/born-1951.jpg" alt="Born in 1951 book cover"><span id="borntxt">Born in 1951: 101 Things You Will Never Forget</span></a>
       </div>
     </div>
   </div>
@@ -503,7 +503,7 @@ h1 em{font-style:normal;color:var(--orange)}
 <footer class="foot">
   <div class="foot-inner">
     <div><div class="brand2">The Gentle Bookshop</div><p>Gentle books for little ones and golden years. Book links go to Amazon.</p></div>
-    <div class="flinks"><a href="https://www.youtube.com/@TheGentleBookshop" target="_blank" rel="noopener">YouTube</a><a href="bonus.html">Bonus pictures</a><a href="https://ainjection.github.io/halloween-books/?src=gentle-footer">The Halloween Shelf</a><a href="#top">Back to the shop door</a></div>
+    <div class="flinks"><a href="https://www.youtube.com/@TheGentleBookshop" target="_blank" rel="noopener">YouTube</a><a href="../bonus.html">Bonus pictures</a><a href="https://ainjection.github.io/halloween-books/?src=gentle-footer">The Halloween Shelf</a><a href="#top">Back to the shop door</a></div>
   </div>
 </footer>
 
@@ -554,7 +554,7 @@ h1 em{font-style:normal;color:var(--orange)}
 
   // ---------- window display ----------
   ['goodnight-capybara', 'big-book-of-why-little-ones', 'chair-tai-chi', 'little-star', 'dysgraphia-kids'].forEach((c, i) => {
-    const im = document.createElement('img'); im.src = `assets/${c}.jpg`; im.alt = ''; im.style.transform = `rotate(${[-4, 2, -1, 3, -3][i]}deg)`; $('#winbooks').appendChild(im); });
+    const im = document.createElement('img'); im.src = `../assets/${c}.jpg`; im.alt = ''; im.style.transform = `rotate(${[-4, 2, -1, 3, -3][i]}deg)`; $('#winbooks').appendChild(im); });
 
   // ---------- the animal books walking along the pavement ----------
   const CAST = [
@@ -565,7 +565,7 @@ h1 em{font-style:normal;color:var(--orange)}
     const a = document.createElement('a'); a.className = 'wb'; a.href = `https://www.amazon.com/dp/${asin}`; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', `${slug} book on Amazon`);
     a.innerHTML = `<span class="say">${says}</span>
       <svg class="legs" viewBox="0 0 120 70"><g class="lL"><path d="M40 0 V50" stroke="#21302e" stroke-width="8" stroke-linecap="round"/><ellipse cx="34" cy="56" rx="17" ry="9" fill="#f08c34"/></g><g class="lR"><path d="M80 0 V50" stroke="#21302e" stroke-width="8" stroke-linecap="round"/><ellipse cx="86" cy="56" rx="17" ry="9" fill="#f08c34"/></g></svg>
-      <div class="cv"><img src="assets/${slug === 'badger' ? 'badger' : slug}.jpg" alt=""></div>
+      <div class="cv"><img src="../assets/${slug === 'badger' ? 'badger' : slug}.jpg" alt=""></div>
       <svg class="eyes" viewBox="0 0 120 42"><g class="eo"><ellipse cx="41" cy="22" rx="13" ry="15" fill="#fff" stroke="#21302e" stroke-width="3"/><ellipse cx="79" cy="22" rx="13" ry="15" fill="#fff" stroke="#21302e" stroke-width="3"/><circle class="p" cx="44" cy="25" r="6" fill="#21302e"/><circle class="p" cx="82" cy="25" r="6" fill="#21302e"/></g><g class="ec" style="opacity:0"><path d="M29 24 Q41 32 53 24 M67 24 Q79 32 91 24" stroke="#21302e" stroke-width="4" fill="none" stroke-linecap="round"/></g></svg>
       <svg class="arms" viewBox="0 0 192 86"><g class="aL"><path d="M38 6 Q14 30 8 52" stroke="#21302e" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="8" cy="55" r="9" fill="#fff" stroke="#21302e" stroke-width="3"/></g><g class="aR"><path d="M154 6 Q178 30 184 52" stroke="#21302e" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="184" cy="55" r="9" fill="#fff" stroke="#21302e" stroke-width="3"/></g></svg>`;
     $('#walkers').appendChild(a);
@@ -628,9 +628,9 @@ h1 em{font-style:normal;color:var(--orange)}
   const EYES = '<svg viewBox="0 0 120 42"><ellipse cx="41" cy="22" rx="13" ry="15" fill="#fff" stroke="#21302e" stroke-width="3"/><ellipse cx="79" cy="22" rx="13" ry="15" fill="#fff" stroke="#21302e" stroke-width="3"/><circle cx="44" cy="25" r="6" fill="#21302e"/><circle cx="82" cy="25" r="6" fill="#21302e"/></svg>';
   $$('.shelf[data-books]').forEach(sh => {
     sh.innerHTML = sh.dataset.books.split(',').map(slug => { const b = BOOKS[slug]; if (!b) return '';
-      return `<div class="card"><a class="cvr cardlink" href="books/${slug}.html"><span class="peekeyes">${EYES}</span><img src="assets/${b.cover}" alt="${b.short} cover" loading="lazy"></a>
-        <h4><a href="books/${slug}.html">${b.short}</a></h4>
-        <div class="acts"><a class="buy" href="https://www.amazon.com/dp/${b.asin}" target="_blank" rel="noopener">Amazon</a><a class="look peek" href="books/${slug}.html">Look inside</a></div></div>`; }).join('');
+      return `<div class="card"><a class="cvr" href="../books/${slug}.html"><span class="peekeyes">${EYES}</span><img src="../assets/${b.cover}" alt="${b.short} cover" loading="lazy"></a>
+        <h4><a href="../books/${slug}.html">${b.short}</a></h4>
+        <div class="acts"><a class="buy" href="https://www.amazon.com/dp/${b.asin}" target="_blank" rel="noopener">Amazon</a><a class="look" href="../books/${slug}.html">Look inside</a></div></div>`; }).join('');
   });
   $$('.card').forEach(c => c.addEventListener('pointerenter', () => GS.isOn() && GS.voices.pop()));
 
@@ -651,8 +651,8 @@ h1 em{font-style:normal;color:var(--orange)}
   const BED = c => `<svg class="frame" viewBox="0 0 100 70"><rect x="4" y="0" width="10" height="66" rx="4" fill="#8a5a36"/><rect x="86" y="18" width="10" height="48" rx="4" fill="#8a5a36"/><path d="M8 28 H92 V58 H8Z" fill="${c}"/><path d="M8 28 Q30 20 50 30 Q70 20 92 28" fill="${c}" opacity=".85"/><rect x="8" y="54" width="84" height="8" fill="#6b4530"/></svg>`;
   const SLEEP = '<svg viewBox="0 0 120 42"><g class="c"><ellipse cx="41" cy="24" rx="13" ry="9" fill="#e9dcc2" stroke="#21302e" stroke-width="3"/><ellipse cx="79" cy="24" rx="13" ry="9" fill="#e9dcc2" stroke="#21302e" stroke-width="3"/><path d="M30 25 Q41 32 52 25 M68 25 Q79 32 90 25" stroke="#21302e" stroke-width="3" fill="none"/></g><g class="o" style="opacity:0"><ellipse cx="41" cy="22" rx="13" ry="15" fill="#fff" stroke="#21302e" stroke-width="3"/><ellipse cx="79" cy="22" rx="13" ry="15" fill="#fff" stroke="#21302e" stroke-width="3"/><circle cx="44" cy="25" r="6" fill="#21302e"/><circle cx="82" cy="25" r="6" fill="#21302e"/></g></svg>';
   STORIES.forEach((slug, i) => { const b = BOOKS[slug]; if (!b) return;
-    const a = document.createElement('a'); a.className = 'bed'; a.href = `books/${slug}.html`; a.style.left = (1.5 + i * 16.4) + '%';
-    a.innerHTML = `<span class="bub">${QUOTES[i]}</span><span class="zz">z z</span><div class="eyes">${SLEEP}</div><div class="bk"><img src="assets/${b.cover}" alt="${b.short}"></div>${BED(['#9fd8e0', '#f2b3b3', '#fac846', '#b7d9a8', '#c9b6e8', '#f5c08a'][i])}`;
+    const a = document.createElement('a'); a.className = 'bed'; a.href = `../books/${slug}.html`; a.style.left = (1.5 + i * 16.4) + '%';
+    a.innerHTML = `<span class="bub">${QUOTES[i]}</span><span class="zz">z z</span><div class="eyes">${SLEEP}</div><div class="bk"><img src="../assets/${b.cover}" alt="${b.short}"></div>${BED(['#9fd8e0', '#f2b3b3', '#fac846', '#b7d9a8', '#c9b6e8', '#f5c08a'][i])}`;
     a.addEventListener('pointerenter', () => { a.classList.add('awake'); a.querySelector('.c').style.opacity = 0; a.querySelector('.o').style.opacity = 1; GS.isOn() && GS.yawn(); });
     a.addEventListener('pointerleave', () => { a.classList.remove('awake'); a.querySelector('.c').style.opacity = 1; a.querySelector('.o').style.opacity = 0; });
     $('#beds').appendChild(a); });
@@ -674,10 +674,10 @@ h1 em{font-style:normal;color:var(--orange)}
   COLOURS.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.style.background = c; b.setAttribute('aria-label', c === '#ffffff' ? 'Eraser (white)' : 'Colour ' + c); b.setAttribute('aria-pressed', i === 0);
     b.addEventListener('click', () => { colour = c; $$('#palette button').forEach(x => x.setAttribute('aria-pressed', x === b)); GS.isOn() && GS.voices.pop(); }); $('#palette').appendChild(b); });
   PAGES.forEach(([book, n], i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-pressed', i === 0); b.setAttribute('aria-label', `Page ${i + 1}`);
-    b.innerHTML = `<img src="assets/samples/${book}/${n}-thumb.jpg" alt="">`; b.addEventListener('click', () => { load(i); $$('#picker button').forEach(x => x.setAttribute('aria-pressed', x === b)); }); $('#picker').appendChild(b); });
+    b.innerHTML = `<img src="../assets/samples/${book}/${n}-thumb.jpg" alt="">`; b.addEventListener('click', () => { load(i); $$('#picker button').forEach(x => x.setAttribute('aria-pressed', x === b)); }); $('#picker').appendChild(b); });
   function load(i) { pageIdx = i; const [book, n] = PAGES[i]; const im = new Image(); im.onload = () => { cx.fillStyle = '#fff'; cx.fillRect(0, 0, 800, 800); cx.drawImage(im, 0, 0, 800, 800);
       try { base = cx.getImageData(0, 0, 800, 800); } catch (e) { base = null; } };
-    im.src = `assets/samples/${book}/${n}.jpg`; $('#cbook').href = 'https://www.amazon.com/dp/' + (book === 'capybara' ? 'B0H4C8BW8Z' : 'B0H4R6WCTP'); }
+    im.src = `../assets/samples/${book}/${n}.jpg`; $('#cbook').href = 'https://www.amazon.com/dp/' + (book === 'capybara' ? 'B0H4C8BW8Z' : 'B0H4R6WCTP'); }
   load(0);
   $('#cclear').addEventListener('click', () => load(pageIdx));
   cv.addEventListener('pointerdown', e => {
@@ -787,7 +787,7 @@ h1 em{font-style:normal;color:var(--orange)}
       $$('#years button').forEach(x => x.setAttribute('aria-pressed', x === b));
       $('#needle').animate([{ transform: getComputedStyle($('#needle')).transform === 'none' ? 'rotate(-60deg)' : getComputedStyle($('#needle')).transform }, { transform: `rotate(${ang}deg)` }], { duration: 700, easing: 'cubic-bezier(.3,1.6,.5,1)', fill: 'forwards' });
       const img = $('#bornimg'); img.animate([{ transform: 'rotateY(0)' }, { transform: 'rotateY(90deg)' }, { transform: 'rotateY(0)' }], { duration: 600 });
-      setTimeout(() => { img.src = `assets/born-${y}.jpg`; img.alt = `Born in ${y} book cover`; $('#borntxt').textContent = `Born in ${y}: 101 Things You Will Never Forget`; $('#bornbook').href = 'https://www.amazon.com/dp/' + asin; }, 300);
+      setTimeout(() => { img.src = `../assets/born-${y}.jpg`; img.alt = `Born in ${y} book cover`; $('#borntxt').textContent = `Born in ${y}: 101 Things You Will Never Forget`; $('#bornbook').href = 'https://www.amazon.com/dp/' + asin; }, 300);
       if (GS.isOn()) { GS.chime(784, 0, .4); GS.chime(1175, .12, .6); }
     }); $('#years').appendChild(b); });
   const nd = $('#needle'); nd.style.transformBox = 'view-box'; nd.style.transformOrigin = '100px 100px'; nd.style.transform = 'rotate(-60deg)';
@@ -802,7 +802,7 @@ h1 em{font-style:normal;color:var(--orange)}
 
   // ---------- Seasonal: the Halloween corner ----------
   const HW = ['halloween-mosaics-complete', 'halloween-grayscale-vol1', 'halloween-seek-and-find', 'halloween-word-search-easy', 'halloween-grayscale-complete', 'halloween-mosaics-vol2'];
-  const simgs = HW.map(s => { const im = document.createElement('img'); im.src = `assets/${s}.jpg`; im.alt = ''; $('#sring').appendChild(im); return im; });
+  const simgs = HW.map(s => { const im = document.createElement('img'); im.src = `../assets/${s}.jpg`; im.alt = ''; $('#sring').appendChild(im); return im; });
   const GHOST = '<svg viewBox="0 0 100 120" width="100%"><path d="M50 4 C22 4 8 26 8 52 V112 L20 102 L32 114 L44 102 L56 114 L68 102 L80 114 L92 104 V52 C92 26 78 4 50 4Z" fill="#eef1ff"/><ellipse cx="36" cy="48" rx="7" ry="10" fill="#1b1030"/><ellipse cx="64" cy="48" rx="7" ry="10" fill="#1b1030"/><ellipse cx="50" cy="72" rx="8" ry="10" fill="#1b1030"/></svg>';
   const sgh = [...Array(3)].map(() => { const g = document.createElement('div'); g.className = 'sghost'; g.innerHTML = GHOST; $('#sghosts').appendChild(g); return g; });
 
@@ -833,6 +833,5 @@ h1 em{font-style:normal;color:var(--orange)}
   requestAnimationFrame(tick);
 })();
 </script>
-<script src="track.js" defer></script>
 </body>
 </html>
