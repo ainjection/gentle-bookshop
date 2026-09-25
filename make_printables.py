@@ -66,7 +66,7 @@ def build(c):
     cards = ''
     for slug, img, name, who, blurb, asin in c['items']:
         buy = (f'<a class="btn ghost" href="https://www.amazon.com/dp/{asin}" target="_blank" rel="noopener">See the whole book</a>' if asin
-               else f'<a class="btn ghost" href="{c["shelf"]}#boldeasy">Coming soon to Amazon</a>')
+               else f'<a class="btn ghost" href="free-halloween-coloring-book.html">Get the whole book free</a>')
         cards += f'''
     <article class="card">
       <img src="{img}" alt="{e(name)} sample page" loading="lazy" width="600" height="600">
