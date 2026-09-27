@@ -1475,5 +1475,33 @@
    "B0H7B8ZMBN"
   ],
   "buy": "https://www.amazon.com/dp/B0HJRP8S6F"
+ },
+ {
+  "slug": "halloween-pocket-sudoku",
+  "asin": "B0HL6G178R",
+  "title": "Pocket Sudoku & Grayscale Coloring: Halloween Edition: 100 Sudoku Puzzles + 100 Grayscale Pictures to Color, Easy to Hard, Travel Size 5 x 8 Inches",
+  "short": "Pocket Sudoku: Halloween Edition",
+  "cover": "halloween-pocket-sudoku.jpg",
+  "shelf": "halloween",
+  "shelf_name": "Halloween Books",
+  "tagline": "100 Sudoku puzzles. 100 Halloween pictures. Each puzzle faces a grayscale picture you can color.",
+  "who": "Adults and teens who love Sudoku and want something prettier than a plain puzzle book, and colorists who want a smaller project. Travel size, for commutes, waiting rooms and Halloween gift bags.",
+  "facts": [
+   "230 pages",
+   "5 x 8 in",
+   "100 puzzles: 34 easy, 33 medium, 33 hard",
+   "100 grayscale pictures",
+   "All solutions included",
+   "Paperback, $9.99"
+  ],
+  "samples": 7,
+  "description": [
+   "Solve a puzzle, then turn to the picture beside it and bring it to life. Every one of the hundred Sudoku puzzles faces a grayscale Halloween picture: black cats in moonlit windows, haunted manors, witches at their cauldrons, pumpkins, owls and gothic lanes.",
+   "The puzzles build from 34 easy to 33 medium and 33 hard, with a clear banner where each level begins. Every puzzle has exactly one solution, each page tells you where its answer is, and all the solutions are at the back.",
+   "A pencil test page at the front shows how your colors look over the gray before you start. Colored pencils work best: each picture backs onto a puzzle page, so markers can bleed through."
+  ],
+  "related": [
+   "grayscale"
+  ]
  }
 ]
