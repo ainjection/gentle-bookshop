@@ -277,15 +277,26 @@ h1 em{font-style:normal;color:var(--orange)}
   .cta.alt{margin:10px 0 0}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.poetry{position:relative;padding:clamp(60px,8vw,100px) clamp(16px,4vw,48px);background:radial-gradient(60% 80% at 75% 45%,#f6dfe3 0%,#e3ebf5 45%,var(--cream) 80%)}
+.poetry .pin{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.poetry h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1.05;margin:.2em 0 .35em;color:#3b3540}
+.poetry h2 em{font-style:italic;color:#a06a5e}
+.poetry p{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.35rem;line-height:1.45;color:#5a5258;max-width:520px;margin:0 0 26px}
+.poetry .kicker{color:#a06a5e}
+.poetry .cta{background:#3b3540;box-shadow:0 10px 26px rgba(59,53,64,.25)}
+.pfan{position:relative;height:380px}
+.pfan img{position:absolute;width:40%;max-width:210px;border-radius:3px;box-shadow:0 18px 40px rgba(60,40,30,.25)}
+@media (max-width:820px){.poetry .pin{grid-template-columns:1fr;text-align:center}.poetry p{margin-left:auto;margin-right:auto}.pfan{height:300px;max-width:420px;width:100%;margin:0 auto}}
 </style>
 <!--seo--><link rel="canonical" href="https://ainjection.github.io/gentle-bookshop/" /><!--/seo-->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <nav class="nav" aria-label="Main">
   <a class="brand" href="#top"><img src="assets/logo.png" alt=""><span>The Gentle Bookshop</span></a>
   <div class="links">
-    <a href="#little">Little ones</a><a href="#curious">Curious kids</a><a href="#learning">Handwriting</a><a href="#golden">Golden years</a><a href="#season">Halloween</a>
+    <a href="#little">Little ones</a><a href="#curious">Curious kids</a><a href="#learning">Handwriting</a><a href="#golden">Golden years</a><a href="#poetry">Poetry</a><a href="#season">Halloween</a>
   </div>
   <span class="pill" title="Hidden baby hedgehogs found">Hedgehogs<span class="hide-sm"> found</span> <b id="hcount">0/5</b></span>
   <button class="pill" id="sound" type="button" aria-pressed="false">Sound <b>off</b></button>
@@ -486,6 +497,23 @@ h1 em{font-style:normal;color:var(--orange)}
   <div class="shelf" data-books="born-1951,born-1956,born-1960,born-1966"></div>
 </section>
 
+<!-- ================= POETRY (Janice Kingsley) ================= -->
+<section class="poetry" id="poetry" aria-label="Poetry by Janice Kingsley">
+  <div class="pin">
+    <div>
+      <div class="kicker">For grown-ups</div>
+      <h2>Gentle poems by <em>Janice Kingsley</em></h2>
+      <p>Short, honest poems for grief, heartbreak and love, with soft watercolour paintings throughout. Read one at the kettle, or a chapter on a long night.</p>
+      <a class="cta" href="https://ainjection.github.io/janice-kingsley/?src=gentle-poetry">Visit Janice's poetry page</a>
+    </div>
+    <a class="pfan" href="https://ainjection.github.io/janice-kingsley/?src=gentle-poetry-books" aria-label="Janice Kingsley's poetry books">
+      <img src="https://ainjection.github.io/janice-kingsley/assets/cover-where-you-are-now.jpg" alt="Where You Are Now cover" loading="lazy" style="left:6%;top:10%;transform:rotate(-8deg)">
+      <img src="https://ainjection.github.io/janice-kingsley/assets/cover-still-learning-to-leave.jpg" alt="Still Learning to Leave cover" loading="lazy" style="left:31%;top:4%;transform:rotate(3deg);z-index:2">
+      <img src="https://ainjection.github.io/janice-kingsley/assets/art-butterflies.jpg" alt="You Still Give Me Butterflies painting" loading="lazy" style="left:56%;top:26%;width:34%;transform:rotate(9deg)">
+    </a>
+  </div>
+</section>
+
 <!-- ================= SEASONAL: HALLOWEEN ================= -->
 <section class="season" id="season" aria-label="Halloween">
   <div class="smoon"></div>
@@ -508,7 +536,7 @@ h1 em{font-style:normal;color:var(--orange)}
 <footer class="foot">
   <div class="foot-inner">
     <div><div class="brand2">The Gentle Bookshop</div><p>Gentle books for little ones and golden years. Book links go to Amazon.</p></div>
-    <div class="flinks"><a href="https://www.youtube.com/@TheGentleBookshop" target="_blank" rel="noopener">YouTube</a><a href="bonus.html">Bonus pictures</a><a href="https://ainjection.github.io/halloween-books/?src=gentle-footer">The Halloween Shelf</a><a href="https://ainjection.github.io/christmas-books/?src=gentle-footer">The Christmas Shelf</a><a href="#top">Back to the shop door</a></div>
+    <div class="flinks"><a href="https://www.youtube.com/@TheGentleBookshop" target="_blank" rel="noopener">YouTube</a><a href="bonus.html">Bonus pictures</a><a href="https://ainjection.github.io/halloween-books/?src=gentle-footer">The Halloween Shelf</a><a href="https://ainjection.github.io/janice-kingsley/?src=gentle-footer">Poetry by Janice Kingsley</a><a href="https://ainjection.github.io/christmas-books/?src=gentle-footer">The Christmas Shelf</a><a href="#top">Back to the shop door</a></div>
   </div>
 </footer>
 
