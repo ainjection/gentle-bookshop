@@ -368,7 +368,7 @@ h1 em{font-style:normal;color:var(--orange)}
       <div class="canvas-wrap"><canvas id="cpage" width="800" height="800" aria-label="Colouring page"></canvas></div>
       <div class="palette" id="palette" role="group" aria-label="Colours"></div>
       <div class="picker" id="picker" role="group" aria-label="Choose a page"></div>
-      <div class="colour-foot"><button class="soft" id="cclear" type="button">Start again</button><a class="soft" id="cbook" href="https://www.amazon.com/dp/B0H4C8BW8Z" target="_blank" rel="noopener">Get the whole book</a></div>
+      <div class="colour-foot"><button class="soft" id="cclear" type="button">Start again</button><a class="soft" id="cbook" href="https://www.amazon.com/dp/B0H4C8BW8Z?tag=gentlebooksho-20" target="_blank" rel="noopener">Get the whole book</a></div>
     </div>
   </div>
 
@@ -472,7 +472,7 @@ h1 em{font-style:normal;color:var(--orange)}
       <div class="dialrow">
         <div class="dialface"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="92" fill="#fffdf8" stroke="#105c64" stroke-width="8"/><g id="needle"><path d="M100 100 L100 24" stroke="#f08c34" stroke-width="8" stroke-linecap="round"/></g><circle cx="100" cy="100" r="12" fill="#105c64"/></svg>
           <div class="years" id="years"></div></div>
-        <a class="bornbook" id="bornbook" href="https://www.amazon.com/dp/B0HJ2PXK3N" target="_blank" rel="noopener"><img id="bornimg" src="../assets/born-1951.jpg" alt="Born in 1951 book cover"><span id="borntxt">Born in 1951: 101 Things You Will Never Forget</span></a>
+        <a class="bornbook" id="bornbook" href="https://www.amazon.com/dp/B0HJ2PXK3N?tag=gentlebooksho-20" target="_blank" rel="noopener"><img id="bornimg" src="../assets/born-1951.jpg" alt="Born in 1951 book cover"><span id="borntxt">Born in 1951: 101 Things You Will Never Forget</span></a>
       </div>
     </div>
   </div>
@@ -506,11 +506,11 @@ h1 em{font-style:normal;color:var(--orange)}
     <div><div class="brand2">The Gentle Bookshop</div><p>Gentle books for little ones and golden years. Book links go to Amazon.</p></div>
     <div class="flinks"><a href="https://www.youtube.com/@TheGentleBookshop" target="_blank" rel="noopener">YouTube</a><a href="../bonus.html">Bonus pictures</a><a href="https://ainjection.github.io/halloween-books/?src=gentle-footer">The Halloween Shelf</a><a href="https://ainjection.github.io/christmas-books/?src=gentle-footer">The Christmas Shelf</a><a href="#top">Back to the shop door</a></div>
   </div>
-</footer>
+<p class="amzn-disclosure" style="font-size:12px;opacity:.7;margin:18px 0 0">As an Amazon Associate I earn from qualifying purchases.</p></footer>
 
 <div class="prize" id="prize" hidden><div class="pbox" role="dialog" aria-modal="true" aria-labelledby="ptitle">
   <h3 id="ptitle">You found all 5 baby hedgehogs!</h3><p>Sharp eyes. The whole family of hedgehogs is back together, and they'd love you to meet their big sister.</p>
-  <a class="cta" href="https://www.amazon.com/dp/B0H4LQ5VT8" target="_blank" rel="noopener">See the Hedgehog book</a>
+  <a class="cta" href="https://www.amazon.com/dp/B0H4LQ5VT8?tag=gentlebooksho-20" target="_blank" rel="noopener">See the Hedgehog book</a>
   <p><button class="soft" id="pclose" type="button">Back to the shop</button></p></div></div>
 
 
@@ -563,7 +563,7 @@ h1 em{font-style:normal;color:var(--orange)}
     ['sea-otter', 'B0H4ZRFMYK', 'Hee hee!'], ['hedgehog', 'B0H4LQ5VT8', 'Snuffle!'], ['badger', 'B0H4MF22M4', 'Hrmph!']];
   const voiceKey = { capybara: 'capybara', axolotl: 'axolotl', redpanda: 'redpanda', 'sea-otter': 'otter', hedgehog: 'hedgehog', badger: 'badger' };
   const walkers = CAST.map(([slug, asin, says], i) => {
-    const a = document.createElement('a'); a.className = 'wb'; a.href = `https://www.amazon.com/dp/${asin}`; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', `${slug} book on Amazon`);
+    const a = document.createElement('a'); a.className = 'wb'; a.href = `https://www.amazon.com/dp/${asin}?tag=gentlebooksho-20`; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', `${slug} book on Amazon`);
     a.innerHTML = `<span class="say">${says}</span>
       <svg class="legs" viewBox="0 0 120 70"><g class="lL"><path d="M40 0 V50" stroke="#21302e" stroke-width="8" stroke-linecap="round"/><ellipse cx="34" cy="56" rx="17" ry="9" fill="#f08c34"/></g><g class="lR"><path d="M80 0 V50" stroke="#21302e" stroke-width="8" stroke-linecap="round"/><ellipse cx="86" cy="56" rx="17" ry="9" fill="#f08c34"/></g></svg>
       <div class="cv"><img src="../assets/${slug === 'badger' ? 'badger' : slug}.jpg" alt=""></div>
@@ -631,7 +631,7 @@ h1 em{font-style:normal;color:var(--orange)}
     sh.innerHTML = sh.dataset.books.split(',').map(slug => { const b = BOOKS[slug]; if (!b) return '';
       return `<div class="card"><a class="cvr" href="../books/${slug}.html"><span class="peekeyes">${EYES}</span><img src="../assets/${b.cover}" alt="${b.short} cover" loading="lazy"></a>
         <h4><a href="../books/${slug}.html">${b.short}</a></h4>
-        <div class="acts"><a class="buy" href="https://www.amazon.com/dp/${b.asin}" target="_blank" rel="noopener">Amazon</a><a class="look" href="../books/${slug}.html">Look inside</a></div></div>`; }).join('');
+        <div class="acts"><a class="buy" href="https://www.amazon.com/dp/${b.asin}?tag=gentlebooksho-20" target="_blank" rel="noopener">Amazon</a><a class="look" href="../books/${slug}.html">Look inside</a></div></div>`; }).join('');
   });
   $$('.card').forEach(c => c.addEventListener('pointerenter', () => GS.isOn() && GS.voices.pop()));
 
@@ -678,7 +678,7 @@ h1 em{font-style:normal;color:var(--orange)}
     b.innerHTML = `<img src="../assets/samples/${book}/${n}-thumb.jpg" alt="">`; b.addEventListener('click', () => { load(i); $$('#picker button').forEach(x => x.setAttribute('aria-pressed', x === b)); }); $('#picker').appendChild(b); });
   function load(i) { pageIdx = i; const [book, n] = PAGES[i]; const im = new Image(); im.onload = () => { cx.fillStyle = '#fff'; cx.fillRect(0, 0, 800, 800); cx.drawImage(im, 0, 0, 800, 800);
       try { base = cx.getImageData(0, 0, 800, 800); } catch (e) { base = null; } };
-    im.src = `../assets/samples/${book}/${n}.jpg`; $('#cbook').href = 'https://www.amazon.com/dp/' + (book === 'capybara' ? 'B0H4C8BW8Z' : 'B0H4R6WCTP'); }
+    im.src = `../assets/samples/${book}/${n}.jpg`; $('#cbook').href = 'https://www.amazon.com/dp/' + (book === 'capybara' ? 'B0H4C8BW8Z' : 'B0H4R6WCTP') + '?tag=gentlebooksho-20'; }
   load(0);
   $('#cclear').addEventListener('click', () => load(pageIdx));
   cv.addEventListener('pointerdown', e => {
@@ -788,7 +788,7 @@ h1 em{font-style:normal;color:var(--orange)}
       $$('#years button').forEach(x => x.setAttribute('aria-pressed', x === b));
       $('#needle').animate([{ transform: getComputedStyle($('#needle')).transform === 'none' ? 'rotate(-60deg)' : getComputedStyle($('#needle')).transform }, { transform: `rotate(${ang}deg)` }], { duration: 700, easing: 'cubic-bezier(.3,1.6,.5,1)', fill: 'forwards' });
       const img = $('#bornimg'); img.animate([{ transform: 'rotateY(0)' }, { transform: 'rotateY(90deg)' }, { transform: 'rotateY(0)' }], { duration: 600 });
-      setTimeout(() => { img.src = `../assets/born-${y}.jpg`; img.alt = `Born in ${y} book cover`; $('#borntxt').textContent = `Born in ${y}: 101 Things You Will Never Forget`; $('#bornbook').href = 'https://www.amazon.com/dp/' + asin; }, 300);
+      setTimeout(() => { img.src = `../assets/born-${y}.jpg`; img.alt = `Born in ${y} book cover`; $('#borntxt').textContent = `Born in ${y}: 101 Things You Will Never Forget`; $('#bornbook').href = 'https://www.amazon.com/dp/' + asin + '?tag=gentlebooksho-20'; }, 300);
       if (GS.isOn()) { GS.chime(784, 0, .4); GS.chime(1175, .12, .6); }
     }); $('#years').appendChild(b); });
   const nd = $('#needle'); nd.style.transformBox = 'view-box'; nd.style.transformOrigin = '100px 100px'; nd.style.transform = 'rotate(-60deg)';
