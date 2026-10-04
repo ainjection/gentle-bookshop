@@ -6,7 +6,7 @@ Idempotent: a link that already carries tag= is left alone.
 import os, re, sys
 
 TAG = "gentlebooksho-20"
-SITES = [r"D:\gentle-bookshop-live", r"D:\halloween-books", r"D:\janice-kingsley", r"D:\christmas-books", r"D:\curious-kids"]
+SITES = [r"D:\ainjection-root", r"D:\gentle-bookshop-live", r"D:\halloween-books", r"D:\janice-kingsley", r"D:\christmas-books", r"D:\curious-kids"]
 EXT = (".html", ".js")
 # an amazon.com URL up to the first quote, whitespace, backtick or closing bracket; ${asin} template pieces are allowed through
 URL = re.compile(r"https?://(?:www\.)?amazon\.com/[^\s\"'<>`)]*")
@@ -16,6 +16,8 @@ DISCLOSURE = '<p class="amzn-disclosure" style="font-size:12px;opacity:.7;margin
 def tag(url):
     if re.search(r"[?&]tag=", url):
         return url
+    if url.rstrip("/").endswith("amazon.com/dp") or url.endswith("amazon.com/"):
+        return url   # a JS string that is concatenated with an ASIN later: the tag is added after the ASIN in code, not here
     base, hash_ = (url.split("#", 1) + [""])[:2]
     base = base.rstrip(".,;")
     trail = url[len(base):] if not hash_ else ""
