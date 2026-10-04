@@ -202,6 +202,17 @@ h1 em{font-style:normal;color:var(--orange)}
 .nook{position:relative;padding:110px 0 90px;color:#fcf7ec;background:radial-gradient(90% 60% at 30% 30%,#3b2a1e 0%,#2a1d15 55%,#1b130d 100%)}
 .nook .sec-head h2 em{font-style:normal;color:var(--yellow)}
 .nook .sec-head p{color:#e2d3bf}
+.kitwrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,5vw,56px)}
+.kitlead{color:#e2d3bf;max-width:60ch;margin:0 0 18px;line-height:1.6}
+.kitlead a{color:var(--yellow);font-weight:800}
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.kitem{display:flex;flex-direction:column;gap:6px;padding:18px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#fcf7ec;text-decoration:none;transition:transform .2s,border-color .2s}
+.kitem:hover{transform:translateY(-3px);border-color:var(--yellow)}
+.kitem svg{width:52px;height:52px;margin-bottom:6px}
+.kitem .kpick{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow)}
+.kitem strong{font-size:1.02rem;line-height:1.25}
+.kitem small{color:#e2d3bf;font-size:.9rem;line-height:1.4}
+.kitnote{color:#b8a68f;font-size:.85rem;margin-top:14px}
 .nook-grid{max-width:1180px;margin:30px auto 0;padding:0 clamp(16px,5vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
 .nook-scene{position:relative;min-height:380px}
 .lampglow{position:absolute;left:10%;top:-10%;width:80%;height:90%;border-radius:50%;background:radial-gradient(circle,rgba(255,200,110,.35),transparent 65%)}
@@ -462,6 +473,19 @@ h1 em{font-style:normal;color:var(--orange)}
   <div class="shelf dark" data-books="into-the-wild,mythic-kingdoms,christmas-grayscale-vol1,christmas-grayscale-vol2,christmas-grayscale-complete,halloween-grayscale-vol1,halloween-grayscale-vol2,halloween-grayscale-complete"></div>
   <div class="shelf-title light">Puzzles and activity books</div>
   <div class="shelf dark" data-books="halloween-pocket-sudoku,dogs-mystery-mosaics,summer-seek-and-find,christmas-seek-and-find,halloween-seek-and-find,halloween-mosaics-complete,halloween-word-search-easy,halloween-word-search-hard"></div>
+  <!-- WHAT YOU'LL NEED (Amazon Associates) -->
+  <div class="shelf-title light" id="kit">What you'll need for grayscale pages</div>
+  <div class="kitwrap">
+    <p class="kitlead">Grayscale pages want soft, see-through colour laid gently over the printed shading; ordinary pencils make them look flat. Five things that fix that, and <a href="https://ainjection.github.io/halloween-books/best-pencils-for-grayscale-coloring.html">a short guide to why</a>.</p>
+    <div class="kit">
+      <a class="kitem" href="https://www.amazon.com/dp/B00006IEEV?tag=gentlebooksho-20" target="_blank" rel="noopener sponsored"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 50 L40 14 l10 10 L24 60 L12 62z" fill="#f08c34"/><path d="M12 62 l3-9 6 6z" fill="#fcf7ec"/><path d="M44 10 l6-6 10 10-6 6z" fill="#fcf7ec"/></svg><span class="kpick">Main set</span><strong>Prismacolor Premier, 48</strong><small>Soft, creamy, blends over the grey in one pass.</small></a>
+      <a class="kitem" href="https://www.amazon.com/dp/B07Q47C1WD?tag=gentlebooksho-20" target="_blank" rel="noopener sponsored"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="30" width="6" height="30" rx="2" fill="#6ec1e4"/><rect x="19" y="24" width="6" height="36" rx="2" fill="#fac846"/><rect x="28" y="20" width="6" height="40" rx="2" fill="#f08c34"/><rect x="37" y="24" width="6" height="36" rx="2" fill="#c084fc"/><rect x="46" y="30" width="6" height="30" rx="2" fill="#86efac"/><path d="M10 30l3-6 3 6M19 24l3-6 3 6M28 20l3-6 3 6M37 24l3-6 3 6M46 30l3-6 3 6" fill="#1b130d"/></svg><span class="kpick">Budget set</span><strong>Staedtler 146C, 72</strong><small>Harder lead, crisp detail, fewer snapped tips.</small></a>
+      <a class="kitem" href="https://www.amazon.com/dp/B00006RVSF?tag=gentlebooksho-20" target="_blank" rel="noopener sponsored"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 52 L44 20 l8 8 L20 60z" fill="#fcf7ec" stroke="#e2d3bf" stroke-width="2"/><path d="M12 52 l8 8 -12 4z" fill="#fff"/><circle cx="50" cy="14" r="6" fill="none" stroke="#fac846" stroke-width="2" stroke-dasharray="3 3"/></svg><span class="kpick">Secret weapon</span><strong>Colorless blender, 12</strong><small>Melts strokes together so the page looks painted.</small></a>
+      <a class="kitem" href="https://www.amazon.com/dp/B004ZDL0K2?tag=gentlebooksho-20" target="_blank" rel="noopener sponsored"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="18" width="44" height="30" rx="8" fill="#3b2a1e" stroke="#e2d3bf" stroke-width="2"/><circle cx="24" cy="33" r="5" fill="#1b130d" stroke="#fac846" stroke-width="2"/><circle cx="42" cy="33" r="7" fill="#1b130d" stroke="#fac846" stroke-width="2"/></svg><span class="kpick">Small essential</span><strong>Two-hole sharpener</strong><small>A long point for edges, a blunt one for shading.</small></a>
+      <a class="kitem" href="https://www.amazon.com/dp/B01HCWOZTA?tag=gentlebooksho-20" target="_blank" rel="noopener sponsored"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="6" fill="#2a1d15" stroke="#e2d3bf" stroke-width="2"/><path d="M8 24h48" stroke="#e2d3bf" stroke-width="2"/><rect x="14" y="30" width="4" height="14" fill="#f08c34"/><rect x="21" y="30" width="4" height="14" fill="#fac846"/><rect x="28" y="30" width="4" height="14" fill="#86efac"/><rect x="35" y="30" width="4" height="14" fill="#6ec1e4"/><rect x="42" y="30" width="4" height="14" fill="#c084fc"/><rect x="26" y="8" width="12" height="6" rx="3" fill="#e2d3bf"/></svg><span class="kpick">Keep them in order</span><strong>72-slot pencil case</strong><small>A set you can see is a set you use.</small></a>
+    </div>
+    <p class="kitnote">Links go to Amazon. As an Amazon Associate we earn from qualifying purchases.</p>
+  </div>
 </section>
 
 <!-- ================= GOLDEN YEARS ================= -->
