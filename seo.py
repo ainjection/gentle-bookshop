@@ -18,9 +18,13 @@ def book_ld(page, url):
           'author': {'@type': 'Organization', 'name': 'The Gentle Bookshop'},
           'publisher': {'@type': 'Organization', 'name': 'The Gentle Bookshop'},
           'bookFormat': 'https://schema.org/Paperback', 'inLanguage': 'en'}
-    facts = ' '.join(re.findall(r'<li>([^<]*)</li>', page))
+    facts = ' | '.join(re.findall(r'<li>([^<]*)</li>', page))   # '|' so 'All ages' + '50 designs' never reads as 'ages 50'
     if (m := re.search(r'(\d+)\s*pages', facts)): ld['numberOfPages'] = int(m.group(1))
-    if (m := re.search(r'[Aa]ges? (\d+)', facts)): ld['typicalAgeRange'] = m.group(1) + '-'
+    # \b stops "105 pages 8.5 x 11" reading as "Ages 8" (the bug the 5 Oct 2026 SEO audit found)
+    if re.search(r'\bAll ages\b', facts, re.I): pass          # genuinely all ages: say nothing rather than guess
+    elif (m := re.search(r'\b[Aa]ges? (\d+)\s*(?:to|-|–)\s*(\d+)', facts)): ld['typicalAgeRange'] = f'{m.group(1)}-{m.group(2)}'
+    elif (m := re.search(r'\b[Aa]ges? (\d+)', facts)): ld['typicalAgeRange'] = m.group(1) + '-'
+    elif re.search(r'\b(adults?|seniors?|grown-ups?)\b', name + ' ' + (meta(page, 'description') or ''), re.I): ld['typicalAgeRange'] = '18-'
     amz = re.search(r'https://www\.amazon\.com/dp/[A-Z0-9]{10}', page)
     price = re.search(r'\$(\d+\.\d\d)', facts)
     if amz and price:
