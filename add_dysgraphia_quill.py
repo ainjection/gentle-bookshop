@@ -4,7 +4,7 @@ import re, html as H, os, json
 import fitz
 from PIL import Image
 esc = lambda s: H.escape(s, quote=True)
-ASIN = ''
+ASIN = 'B0HMFRM1JQ'
 SLUG = 'dysgraphia-quill-kids'
 TITLE = "Dysgraphia Handwriting Workbook for Kids Ages 7-11"
 SUB = "Print Practice and a Cursive Starter with Numbered Starting Points, Arrows, and Big-to-Small Lines"
