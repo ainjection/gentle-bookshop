@@ -127,11 +127,11 @@ CSS = '''
   .hero-text .social { justify-content: flex-start; margin-top: 20px; }
   .hero-text .shelfnav { justify-content: flex-start; }
   .hero-grid .hero-video { margin: 0; max-width: none; }
-  .social a.shopbest { background: var(--orange) !important; color: #fff !important; border-color: var(--orange) !important; }
+  .social a.shopbest { background: var(--orange) !important; color:var(--ink) !important; border-color: var(--orange) !important; }
   .shelfnav a.nav-hot { background: var(--yellow); color: var(--ink); }
   section.featured { background: #fff7e8; }
   section.seasonal { background: #f7efe6; }
-  .badge.badge-best { background: var(--orange); color: #fff; }
+  .badge.badge-best { background: var(--orange); color:var(--ink); }
   @media (max-width: 900px) {
     .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 22px; }
     .hero-text .social, .hero-text .shelfnav { justify-content: center; }
