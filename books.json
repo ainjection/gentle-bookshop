@@ -1533,34 +1533,6 @@
   ]
  },
  {
-  "slug": "dysgraphia-quill-kids",
-  "asin": "B0HMFRM1JQ",
-  "title": "Dysgraphia Handwriting Workbook for Kids Ages 7-11: Print Practice and a Cursive Starter with Numbered Starting Points, Arrows, and Big-to-Small Lines",
-  "short": "Dysgraphia Workbook with Quill",
-  "cover": "dysgraphia-quill-kids.jpg",
-  "shelf": "dysgraphia",
-  "shelf_name": "Dysgraphia Workbooks",
-  "tagline": "Every print letter taught by how it moves, with numbered starting points, arrows and big-to-small lines. Plus a gentle cursive starter.",
-  "who": "Kids aged 7 to 11 (grades 2 to 5) whose handwriting is slow, tiring or hard to read, and the parents, teachers and tutors helping them. Suggested sessions of about 10 minutes.",
-  "facts": [
-   "138 pages",
-   "8.5 x 11 in",
-   "Ages 7 to 11, grades 2 to 5",
-   "All 26 letters in movement families",
-   "Cursive starter",
-   "Paperback, $11.99"
-  ],
-  "samples": 7,
-  "description": [
-   "Handwriting help for kids who find writing hard, with or without a diagnosis of dysgraphia. Every print letter is taught by how it moves, in five movement families, with numbered starting points, arrows and a short letter talk to say out loud.",
-   "Practice starts on big lines and steps down to real wide-ruled notebook paper. The letters kids mix up most, b and d, and p and q, are learned in different families and get extra Letter Detective pages. Then capitals, numbers, spacing, words, sentences and dictation.",
-   "Part 3 is a gentle cursive starter: the basic strokes and all 26 lowercase letters, each with its own movement cue, then joins, words and phrases. A grown-up guide, progress pages, a certificate and an answer key are included, and Quill the hedgehog keeps them company all the way."
-  ],
-  "related": [
-   "dysgraphia"
-  ]
- },
- {
   "slug": "women-1951",
   "asin": "B0HMP5XJ88",
   "title": "101 Things Only Women Born in 1951 Remember: The 75th Birthday Gift for Her: Dolls, Fashion, Music and Memories of a 1950s Girlhood",
@@ -1651,6 +1623,62 @@
    "Inside you will also find a how to solve page with a worked example, a picture legend, a time target on every case, a detective log to keep your score and a certificate to claim your rank.",
    "Funny, not frightening. Nothing graphic and nothing gory, just mince pies, mistletoe and malice.",
    "A perfect stocking stuffer, Secret Santa or white elephant gift for anyone who loves murder mysteries and logic puzzles. Grab your copy and start detecting."
+  ]
+ },
+ {
+  "slug": "dysgraphia-print-8-12",
+  "asin": "B0HPMLLRM7",
+  "title": "Dysgraphia Print Workbook for Older Kids Ages 8-12: Daily Handwriting Practice with Shaded Bands, Dotted Midlines, Spacing Guides and Lefty Tips",
+  "short": "Dysgraphia Print Workbook: Ages 8-12",
+  "cover": "dysgraphia-print-8-12.jpg",
+  "shelf": "dysgraphia",
+  "shelf_name": "Dysgraphia Workbooks",
+  "tagline": "For 8 to 12 year olds who know every letter but still write print nobody can read. 81 ten minute lessons with shaded bands, dotted midlines and spacing guides.",
+  "who": "Kids aged 8 to 12 whose print is messy, slow or hard to read, and the parents, tutors, teachers and therapists helping them. Pages may be photocopied for your own home or one classroom.",
+  "facts": [
+   "174 pages",
+   "8.5 x 11 in",
+   "Ages 8 to 12",
+   "81 daily lessons",
+   "Extra b, d, p and q practice",
+   "Paperback, $12.99"
+  ],
+  "samples": 7,
+  "description": [
+   "For older kids who know every letter and still write print nobody can read, with or without a diagnosis of dysgraphia. The book rebuilds neat handwriting in 81 short daily lessons of about ten minutes.",
+   "Shaded writing bands and dotted midlines show exactly where each letter sits, so letters stop floating, shrinking and drifting. Every letter model shows numbered stroke order, and the book opens with pencil warm ups of lines, curves and loops.",
+   "Four line sizes step down from big letters to normal notebook size, with spacing guides between words. Extra pages for b, d, p and q, real words and fun fact sentences made for older kids, tips for left handed writers and an 81 day progress tracker."
+  ],
+  "related": [
+   "dysgraphia"
+  ]
+ },
+ {
+  "slug": "dysgraphia-quill-kids",
+  "asin": "B0HMFRM1JQ",
+  "title": "Dysgraphia Handwriting Workbook for Kids Ages 7-11: Print Practice and a Cursive Starter with Numbered Starting Points, Arrows, and Big-to-Small Lines",
+  "short": "Dysgraphia Workbook with Quill",
+  "cover": "dysgraphia-quill-kids.jpg",
+  "shelf": "dysgraphia",
+  "shelf_name": "Dysgraphia Workbooks",
+  "tagline": "Every print letter taught by how it moves, with numbered starting points, arrows and big-to-small lines. Plus a gentle cursive starter.",
+  "who": "Kids aged 7 to 11 (grades 2 to 5) whose handwriting is slow, tiring or hard to read, and the parents, teachers and tutors helping them. Suggested sessions of about 10 minutes.",
+  "facts": [
+   "138 pages",
+   "8.5 x 11 in",
+   "Ages 7 to 11, grades 2 to 5",
+   "All 26 letters in movement families",
+   "Cursive starter",
+   "Paperback, $11.99"
+  ],
+  "samples": 7,
+  "description": [
+   "Handwriting help for kids who find writing hard, with or without a diagnosis of dysgraphia. Every print letter is taught by how it moves, in five movement families, with numbered starting points, arrows and a short letter talk to say out loud.",
+   "Practice starts on big lines and steps down to real wide-ruled notebook paper. The letters kids mix up most, b and d, and p and q, are learned in different families and get extra Letter Detective pages. Then capitals, numbers, spacing, words, sentences and dictation.",
+   "Part 3 is a gentle cursive starter: the basic strokes and all 26 lowercase letters, each with its own movement cue, then joins, words and phrases. A grown-up guide, progress pages, a certificate and an answer key are included, and Quill the hedgehog keeps them company all the way."
+  ],
+  "related": [
+   "dysgraphia"
   ]
  }
 ]

@@ -38,6 +38,7 @@ shelf = ''.join(f'    <a class="mini" href="{slug}.html"><img src="../assets/{sl
 s = re.sub(r'(<div class="shelf sans">\n).*?(  </div>\n</section>)', lambda m: m.group(1) + shelf + m.group(2), s, flags=re.S)
 if not ASIN:
     s = s.replace('Get it on Amazon</a>', 'Coming soon to Amazon</a>')
+s = re.sub(r'\n\s*<a class="gplay sans"[^\n]*</a>', '', s)   # template's Google Play link is the Gross Book's ebook
 assert 'gross' not in s.lower(), 'template leftovers'
 
 im = Image.open(COVER).convert('RGB'); im.thumbnail((900, 1200)); im.save(f"assets/{SLUG}.jpg", quality=88)
