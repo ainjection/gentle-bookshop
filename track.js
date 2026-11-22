@@ -17,8 +17,18 @@
     else { try { src = sessionStorage.getItem('gb_src'); } catch (e) {} }
     ref = src || (document.referrer ? new URL(document.referrer).host : '');
   } catch (e) {}
+  /* Robots: automated browsers and crawlers that run scripts were about 95% of counted views
+     (Nov 2026). Skip the ones that say what they are. */
+  var ua = navigator.userAgent || '';
+  var robot = navigator.webdriver || !(navigator.languages && navigator.languages.length) ||
+    /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|preview|monitor|uptime|scrape|fetch|python|curl|phantom|puppeteer|playwright/i.test(ua);
+  /* Views with no link behind them carry a coarse browser tag (system + browser version, nothing
+     personal) so a robot that hides can still be spotted as one repeating tag. */
+  var tag = ((ua.match(/Windows|Macintosh|Android|iPhone|iPad|CrOS|Linux/) || ['other'])[0] + ' ' +
+    (ua.match(/(?:Edg|OPR|Firefox|Chrome|Version)\/\d+/) || ['?'])[0]).slice(0, 40);
   function send(kind, extra) {
-    if (KEY.indexOf('__') === 0) return;
+    if (KEY.indexOf('__') === 0 || robot) return;
+    if (kind === 'view' && !ref) extra = tag;
     var body = JSON.stringify({ book: book, kind: kind, ref: ref, target: extra || null, ua_mobile: /Mobi|Android/i.test(navigator.userAgent) });
     try {
       fetch(ENDPOINT, { method: 'POST', keepalive: true, mode: 'cors',
