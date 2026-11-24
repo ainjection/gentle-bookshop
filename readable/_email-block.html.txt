@@ -1,0 +1,9 @@
+  <!-- EMAIL SIGN-UP: optional, never needed for the download. The form embed from the email service goes here
+       once Rob has opened the account and approved the three emails (D:/kdp-adult-handwriting/bonus/emails.md). -->
+  <h2>Want a nudge to keep going?</h2>
+  <div class="how">
+    <p style="margin:0 0 10px">Leave your email and we will send three short notes: the pack again so you can find it later,
+       one tip a week in, and a check-in at two weeks. Nothing else, and you can stop them with one click.</p>
+    <p class="note sans" style="margin:0"><i>Sign-up box goes here.</i></p>
+  </div>
+
